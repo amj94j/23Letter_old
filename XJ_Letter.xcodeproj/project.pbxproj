@@ -30,6 +30,10 @@
 		18E93AC61FC7AFCD00832889 /* LZSwipeableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A46831FC6CCBF0052596F /* LZSwipeableView.m */; };
 		18E93AC71FC7AFD700832889 /* NSObject+LZSwipeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A46861FC6CCBF0052596F /* NSObject+LZSwipeCategory.m */; };
 		18E93ACA1FC7BA7C00832889 /* XJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E93AC91FC7BA7C00832889 /* XJBaseNavigationController.m */; };
+		818663731FF1306C00EEF540 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818663721FF1306C00EEF540 /* image.xcassets */; };
+		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
+		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
+		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
 		AAEEB80E6A19761166EA1D7C /* libPods-XJ_Letter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F76EDF5F5A0B45CD764BD2D4 /* libPods-XJ_Letter.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +109,13 @@
 		18E93AC91FC7BA7C00832889 /* XJBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJBaseNavigationController.m; sourceTree = "<group>"; };
 		60C9C1D3316399AEBCDE0C26 /* Pods-XJ_Letter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJ_Letter.release.xcconfig"; path = "Pods/Target Support Files/Pods-XJ_Letter/Pods-XJ_Letter.release.xcconfig"; sourceTree = "<group>"; };
 		6E667DA63DC5DE01EBF2F0DE /* Pods-XJ_Letter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJ_Letter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XJ_Letter/Pods-XJ_Letter.debug.xcconfig"; sourceTree = "<group>"; };
+		818663721FF1306C00EEF540 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
+		818663751FF1357300EEF540 /* QQLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLeftTableViewController.h; sourceTree = "<group>"; };
+		818663761FF1357300EEF540 /* QQLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLeftTableViewController.m; sourceTree = "<group>"; };
+		818663771FF1357300EEF540 /* QQDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDrawerViewController.h; sourceTree = "<group>"; };
+		818663781FF1357400EEF540 /* QQMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQMainTabBarController.h; sourceTree = "<group>"; };
+		818663791FF1357400EEF540 /* QQDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQDrawerViewController.m; sourceTree = "<group>"; };
+		8186637A1FF1357400EEF540 /* QQMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQMainTabBarController.m; sourceTree = "<group>"; };
 		F76EDF5F5A0B45CD764BD2D4 /* libPods-XJ_Letter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XJ_Letter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -240,6 +251,7 @@
 				18B2A17B1FC592AF003B97A0 /* Vendor */,
 				18B2A17A1FC59291003B97A0 /* ViewController */,
 				18B2A1771FC59257003B97A0 /* Model */,
+				818663741FF1352300EEF540 /* drawer */,
 				18B2A1421FC5907C003B97A0 /* AppDelegate.h */,
 				18B2A1431FC5907C003B97A0 /* AppDelegate.m */,
 				18B2A1451FC5907C003B97A0 /* ViewController.h */,
@@ -247,6 +259,7 @@
 				183A46761FC6749E0052596F /* XJ_Letter-Prefix.pch */,
 				18B2A1481FC5907C003B97A0 /* Main.storyboard */,
 				18B2A14E1FC5907C003B97A0 /* Assets.xcassets */,
+				818663721FF1306C00EEF540 /* image.xcassets */,
 				18B2A1501FC5907C003B97A0 /* LaunchScreen.storyboard */,
 				18B2A1531FC5907C003B97A0 /* Info.plist */,
 				18B2A1541FC5907C003B97A0 /* main.m */,
@@ -344,6 +357,19 @@
 				F76EDF5F5A0B45CD764BD2D4 /* libPods-XJ_Letter.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		818663741FF1352300EEF540 /* drawer */ = {
+			isa = PBXGroup;
+			children = (
+				818663771FF1357300EEF540 /* QQDrawerViewController.h */,
+				818663791FF1357400EEF540 /* QQDrawerViewController.m */,
+				818663751FF1357300EEF540 /* QQLeftTableViewController.h */,
+				818663761FF1357300EEF540 /* QQLeftTableViewController.m */,
+				818663781FF1357400EEF540 /* QQMainTabBarController.h */,
+				8186637A1FF1357400EEF540 /* QQMainTabBarController.m */,
+			);
+			path = drawer;
 			sourceTree = "<group>";
 		};
 		91B013DF012197E361919B77 /* Pods */ = {
@@ -467,6 +493,7 @@
 			files = (
 				18B2A1521FC5907C003B97A0 /* LaunchScreen.storyboard in Resources */,
 				18B2A1861FC595D7003B97A0 /* Images.xcassets in Resources */,
+				818663731FF1306C00EEF540 /* image.xcassets in Resources */,
 				18B2A14F1FC5907C003B97A0 /* Assets.xcassets in Resources */,
 				18B2A14A1FC5907C003B97A0 /* Main.storyboard in Resources */,
 			);
@@ -550,12 +577,15 @@
 				183A46961FC6FDCB0052596F /* MainSwipeCardCell.m in Sources */,
 				183A46801FC67D600052596F /* UIImage+Addons.m in Sources */,
 				183A46751FC673ED0052596F /* NSDictionary+Addons.m in Sources */,
+				8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */,
 				18B2A1471FC5907C003B97A0 /* ViewController.m in Sources */,
 				185937931FD3D717009EA7FA /* XJLauchMovieViewController.m in Sources */,
+				8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */,
 				183A467A1FC678D40052596F /* UIColor+Addons.m in Sources */,
 				183A46931FC6FDB30052596F /* MainCardInfo.m in Sources */,
 				183A46901FC6FC2A0052596F /* MainViewController.m in Sources */,
 				18B2A14D1FC5907C003B97A0 /* XJ_Letter.xcdatamodeld in Sources */,
+				8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */,
 				18E93ACA1FC7BA7C00832889 /* XJBaseNavigationController.m in Sources */,
 				18B2A1551FC5907C003B97A0 /* main.m in Sources */,
 				18B2A1441FC5907C003B97A0 /* AppDelegate.m in Sources */,
@@ -724,15 +754,17 @@
 			baseConfigurationReference = 6E667DA63DC5DE01EBF2F0DE /* Pods-XJ_Letter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LW8TGBS3X4;
+				DEVELOPMENT_TEAM = 25ZF24A894;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XJ_Letter/XJ_Letter-Prefix.pch";
 				INFOPLIST_FILE = XJ_Letter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiujichuanmei.23letter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XHDoctor.User;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -743,15 +775,17 @@
 			baseConfigurationReference = 60C9C1D3316399AEBCDE0C26 /* Pods-XJ_Letter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LW8TGBS3X4;
+				DEVELOPMENT_TEAM = 25ZF24A894;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XJ_Letter/XJ_Letter-Prefix.pch";
 				INFOPLIST_FILE = XJ_Letter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiujichuanmei.23letter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XHDoctor.User;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
