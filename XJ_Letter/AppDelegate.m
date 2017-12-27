@@ -46,7 +46,7 @@
     //  创建主视图
     QQMainTabBarController *mainViewController = [[QQMainTabBarController alloc]init];
     //  传入左视图和主视图以及抽屉的最大宽度 创建抽屉
-    QQDrawerViewController *rootViewController = [QQDrawerViewController drawerWithLeftViewController:leftViewController andMainViewController:mainViewController andMaxWidth:300];
+    QQDrawerViewController *rootViewController = [QQDrawerViewController drawerWithLeftViewController:leftViewController andMainViewController:mainViewController andMaxWidth:leftDrawerWidth];
     self.window.rootViewController = rootViewController;
     //    [self.window makeKeyAndVisible];
     

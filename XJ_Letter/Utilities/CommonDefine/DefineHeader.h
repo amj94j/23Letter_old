@@ -9,5 +9,5 @@
 #ifndef DefineHeader_h
 #define DefineHeader_h
 
-
+#define leftDrawerWidth (ScreenWidth-PXChange(150))
 #endif /* DefineHeader_h */

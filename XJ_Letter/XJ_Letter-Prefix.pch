@@ -24,6 +24,8 @@
 #import "UIColor+Addons.h"
 #import "NSDictionary+Addons.h"
 #import "UIImage+Addons.h"
+#import "UIView+Sizes.h"
+#import "UIImageView+WebCache.h"
 
 #import "CommonMacroDefine.h"
 #import "CommonConstantsDefine.h"
@@ -34,6 +36,8 @@
 #import "HYBNetworking.h"
 #import "JSONModel.h"
 #import "Masonry.h"
+
+
 
 #endif  // define __OBJC__
 
