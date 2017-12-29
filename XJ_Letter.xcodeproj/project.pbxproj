@@ -30,6 +30,10 @@
 		18E93AC61FC7AFCD00832889 /* LZSwipeableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A46831FC6CCBF0052596F /* LZSwipeableView.m */; };
 		18E93AC71FC7AFD700832889 /* NSObject+LZSwipeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A46861FC6CCBF0052596F /* NSObject+LZSwipeCategory.m */; };
 		18E93ACA1FC7BA7C00832889 /* XJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E93AC91FC7BA7C00832889 /* XJBaseNavigationController.m */; };
+		81137D9A1FF5E5D5000B873E /* XJGuanZhuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81137D991FF5E5D5000B873E /* XJGuanZhuViewController.m */; };
+		81137D9D1FF5E5E2000B873E /* XJFansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81137D9C1FF5E5E2000B873E /* XJFansViewController.m */; };
+		81137DA11FF5ED76000B873E /* XJguanzhufansTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81137D9F1FF5ED76000B873E /* XJguanzhufansTableViewCell.m */; };
+		81137DA21FF5ED76000B873E /* XJguanzhufansTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81137DA01FF5ED76000B873E /* XJguanzhufansTableViewCell.xib */; };
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
@@ -108,6 +112,13 @@
 		18E93AC91FC7BA7C00832889 /* XJBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJBaseNavigationController.m; sourceTree = "<group>"; };
 		60C9C1D3316399AEBCDE0C26 /* Pods-XJ_Letter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJ_Letter.release.xcconfig"; path = "Pods/Target Support Files/Pods-XJ_Letter/Pods-XJ_Letter.release.xcconfig"; sourceTree = "<group>"; };
 		6E667DA63DC5DE01EBF2F0DE /* Pods-XJ_Letter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJ_Letter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XJ_Letter/Pods-XJ_Letter.debug.xcconfig"; sourceTree = "<group>"; };
+		81137D981FF5E5D5000B873E /* XJGuanZhuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJGuanZhuViewController.h; sourceTree = "<group>"; };
+		81137D991FF5E5D5000B873E /* XJGuanZhuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJGuanZhuViewController.m; sourceTree = "<group>"; };
+		81137D9B1FF5E5E2000B873E /* XJFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJFansViewController.h; sourceTree = "<group>"; };
+		81137D9C1FF5E5E2000B873E /* XJFansViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJFansViewController.m; sourceTree = "<group>"; };
+		81137D9E1FF5ED76000B873E /* XJguanzhufansTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJguanzhufansTableViewCell.h; sourceTree = "<group>"; };
+		81137D9F1FF5ED76000B873E /* XJguanzhufansTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJguanzhufansTableViewCell.m; sourceTree = "<group>"; };
+		81137DA01FF5ED76000B873E /* XJguanzhufansTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJguanzhufansTableViewCell.xib; sourceTree = "<group>"; };
 		818663751FF1357300EEF540 /* QQLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLeftTableViewController.h; sourceTree = "<group>"; };
 		818663761FF1357300EEF540 /* QQLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLeftTableViewController.m; sourceTree = "<group>"; };
 		818663771FF1357300EEF540 /* QQDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDrawerViewController.h; sourceTree = "<group>"; };
@@ -293,6 +304,7 @@
 		18B2A17A1FC59291003B97A0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				81137D941FF5E594000B873E /* LeftViewController */,
 				183A46871FC6CCFE0052596F /* MainVIewController */,
 			);
 			path = ViewController;
@@ -354,6 +366,44 @@
 				F76EDF5F5A0B45CD764BD2D4 /* libPods-XJ_Letter.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81137D941FF5E594000B873E /* LeftViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81137D951FF5E594000B873E /* Model */,
+				81137D961FF5E594000B873E /* View */,
+				81137D971FF5E594000B873E /* ViewController */,
+			);
+			path = LeftViewController;
+			sourceTree = "<group>";
+		};
+		81137D951FF5E594000B873E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81137D961FF5E594000B873E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81137D9E1FF5ED76000B873E /* XJguanzhufansTableViewCell.h */,
+				81137D9F1FF5ED76000B873E /* XJguanzhufansTableViewCell.m */,
+				81137DA01FF5ED76000B873E /* XJguanzhufansTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81137D971FF5E594000B873E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81137D981FF5E5D5000B873E /* XJGuanZhuViewController.h */,
+				81137D991FF5E5D5000B873E /* XJGuanZhuViewController.m */,
+				81137D9B1FF5E5E2000B873E /* XJFansViewController.h */,
+				81137D9C1FF5E5E2000B873E /* XJFansViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		818663741FF1352300EEF540 /* drawer */ = {
@@ -489,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B2A1521FC5907C003B97A0 /* LaunchScreen.storyboard in Resources */,
+				81137DA21FF5ED76000B873E /* XJguanzhufansTableViewCell.xib in Resources */,
 				18B2A1861FC595D7003B97A0 /* Images.xcassets in Resources */,
 				18B2A14F1FC5907C003B97A0 /* Assets.xcassets in Resources */,
 				18B2A14A1FC5907C003B97A0 /* Main.storyboard in Resources */,
@@ -568,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E93AC71FC7AFD700832889 /* NSObject+LZSwipeCategory.m in Sources */,
+				81137D9A1FF5E5D5000B873E /* XJGuanZhuViewController.m in Sources */,
 				18E93AC61FC7AFCD00832889 /* LZSwipeableView.m in Sources */,
 				1876F4E41FCE8972004F8E18 /* MainBottomToolView.m in Sources */,
 				183A46961FC6FDCB0052596F /* MainSwipeCardCell.m in Sources */,
@@ -576,6 +628,7 @@
 				8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */,
 				18B2A1471FC5907C003B97A0 /* ViewController.m in Sources */,
 				185937931FD3D717009EA7FA /* XJLauchMovieViewController.m in Sources */,
+				81137D9D1FF5E5E2000B873E /* XJFansViewController.m in Sources */,
 				8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */,
 				183A467A1FC678D40052596F /* UIColor+Addons.m in Sources */,
 				183A46931FC6FDB30052596F /* MainCardInfo.m in Sources */,
@@ -586,6 +639,7 @@
 				18B2A1551FC5907C003B97A0 /* main.m in Sources */,
 				18B2A1441FC5907C003B97A0 /* AppDelegate.m in Sources */,
 				18A714BB1FC7FCBD00C13614 /* UIView+Sizes.m in Sources */,
+				81137DA11FF5ED76000B873E /* XJguanzhufansTableViewCell.m in Sources */,
 				183A468D1FC6DD7C0052596F /* XJBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

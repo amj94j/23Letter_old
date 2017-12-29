@@ -12,6 +12,8 @@
 #import "MainSwipeCardCell.h"
 #import "MainBottomToolView.h"
 #import "QQDrawerViewController.h"
+#import "XJGuanZhuViewController.h"
+#import "XJFansViewController.h"
 #define kColorBackground_Main  [UIColor colorWithHexString:@"#f7f7f7"]
 
 @interface MainViewController () <LZSwipeableViewDataSource,
@@ -65,6 +67,7 @@ LZSwipeableViewDelegate>
     
     [self addCustomTitleWithTitle:@"23号信"];
     [self makeNavigationBar];
+    [self configNotifation];
     //
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -113,7 +116,10 @@ LZSwipeableViewDelegate>
     self.navigationItem.rightBarButtonItem = rightBar;
 }
 
-
+-(void)configNotifation{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(guanzhuClick) name:GuanzhuClick object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fansClick) name:FansClick object:nil];
+}
 //抽屉菜单点击事件
 -(void)leftBarClick{
     NSLog(@"点击了左侧按钮");
@@ -121,6 +127,16 @@ LZSwipeableViewDelegate>
 }
 -(void)rightBarClick{
     NSLog(@"点击了右侧按钮");
+}
+-(void)guanzhuClick{
+    XJGuanZhuViewController *guanzhuVC = [XJGuanZhuViewController new];
+    guanzhuVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:guanzhuVC animated:NO];
+}
+-(void)fansClick{
+    XJFansViewController *fansVC = [XJFansViewController new];
+    fansVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:fansVC animated:NO];
 }
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];

@@ -69,8 +69,8 @@
         target = self;
         action = @selector(cancelAction:);
     }
-    self.navigationItem.leftBarButtonItem = [self buttonWithImage:[[UIImage imageNamed:@"regsiter_btn_back_default"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                 highlightedImage:[[UIImage imageNamed:@"regsiter_btn_back_default"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ]
+    self.navigationItem.leftBarButtonItem = [self buttonWithImage:[[UIImage imageNamed:@"navbar_return"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                 highlightedImage:[[UIImage imageNamed:@"navbar_return"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ]
                                                            target:target
                                                            action:action];
     

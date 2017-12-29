@@ -9,6 +9,7 @@
 #import "QQLeftTableViewController.h"
 #import "QQDrawerViewController.h"
 
+
 @interface QQLeftTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)UIView *headerView;
 @property (nonatomic, strong)NSMutableArray *dataArray;
@@ -33,7 +34,6 @@
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, PXChange(600), size.width, size.height - PXChange(600)) style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sigle.jpg"]];
-    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.scrollEnabled = NO;
@@ -194,11 +194,14 @@
 //关注
 -(void)guanzhuClick{
     NSLog(@"点击了 关注");
-    
+    [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:GuanzhuClick object:nil];
 }
 //粉丝
 -(void)fansClick{
     NSLog(@"点击了 粉丝");
+    [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:FansClick object:nil];
     
 }
 - (NSMutableArray *)dataArray{
