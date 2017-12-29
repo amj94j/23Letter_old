@@ -8,6 +8,7 @@
 
 #import "XJGuanZhuViewController.h"
 #import "XJguanzhufansTableViewCell.h"
+#import "XJPeopleViewController.h"
 @interface XJGuanZhuViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView * tableView;
 @property(nonatomic,strong)NSMutableArray *dataSource;
@@ -38,6 +39,10 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return  PXChange(120);
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    XJPeopleViewController * xjbase = [[XJPeopleViewController alloc]init];
+    [self.navigationController pushViewController:xjbase animated:YES];
 }
 #pragma mark  ====懒加载
 -(NSMutableArray *)dataSource{

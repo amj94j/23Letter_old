@@ -75,6 +75,18 @@
                                                            action:action];
     
 }
+- (void)addCustomWhiteBackBarButtonItemWithTarget:(id)target action:(SEL)action
+{
+    if (!target) {
+        target = self;
+        action = @selector(cancelAction:);
+    }
+    self.navigationItem.leftBarButtonItem = [self buttonWithImage:[[UIImage imageNamed:@"navbar_return_my"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                 highlightedImage:[[UIImage imageNamed:@"navbar_return_my"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ]
+                                                           target:target
+                                                           action:action];
+    
+}
 
 - (void)cancelAction:(id)sender
 {

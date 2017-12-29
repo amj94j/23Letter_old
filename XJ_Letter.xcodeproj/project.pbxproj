@@ -37,6 +37,10 @@
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
+		81D5755B1FF64A6800476502 /* XJPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D575591FF64A6800476502 /* XJPeopleViewController.m */; };
+		81D5755C1FF64A6800476502 /* XJPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D5755A1FF64A6800476502 /* XJPeopleViewController.xib */; };
+		81D575601FF6523900476502 /* XJPeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D5755E1FF6523900476502 /* XJPeopleTableViewCell.m */; };
+		81D575611FF6523900476502 /* XJPeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D5755F1FF6523900476502 /* XJPeopleTableViewCell.xib */; };
 		AAEEB80E6A19761166EA1D7C /* libPods-XJ_Letter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F76EDF5F5A0B45CD764BD2D4 /* libPods-XJ_Letter.a */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +129,12 @@
 		818663781FF1357400EEF540 /* QQMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQMainTabBarController.h; sourceTree = "<group>"; };
 		818663791FF1357400EEF540 /* QQDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQDrawerViewController.m; sourceTree = "<group>"; };
 		8186637A1FF1357400EEF540 /* QQMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQMainTabBarController.m; sourceTree = "<group>"; };
+		81D575581FF64A6800476502 /* XJPeopleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPeopleViewController.h; sourceTree = "<group>"; };
+		81D575591FF64A6800476502 /* XJPeopleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPeopleViewController.m; sourceTree = "<group>"; };
+		81D5755A1FF64A6800476502 /* XJPeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJPeopleViewController.xib; sourceTree = "<group>"; };
+		81D5755D1FF6523900476502 /* XJPeopleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPeopleTableViewCell.h; sourceTree = "<group>"; };
+		81D5755E1FF6523900476502 /* XJPeopleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPeopleTableViewCell.m; sourceTree = "<group>"; };
+		81D5755F1FF6523900476502 /* XJPeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJPeopleTableViewCell.xib; sourceTree = "<group>"; };
 		F76EDF5F5A0B45CD764BD2D4 /* libPods-XJ_Letter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XJ_Letter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -391,6 +401,9 @@
 				81137D9E1FF5ED76000B873E /* XJguanzhufansTableViewCell.h */,
 				81137D9F1FF5ED76000B873E /* XJguanzhufansTableViewCell.m */,
 				81137DA01FF5ED76000B873E /* XJguanzhufansTableViewCell.xib */,
+				81D5755D1FF6523900476502 /* XJPeopleTableViewCell.h */,
+				81D5755E1FF6523900476502 /* XJPeopleTableViewCell.m */,
+				81D5755F1FF6523900476502 /* XJPeopleTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +415,9 @@
 				81137D991FF5E5D5000B873E /* XJGuanZhuViewController.m */,
 				81137D9B1FF5E5E2000B873E /* XJFansViewController.h */,
 				81137D9C1FF5E5E2000B873E /* XJFansViewController.m */,
+				81D575581FF64A6800476502 /* XJPeopleViewController.h */,
+				81D575591FF64A6800476502 /* XJPeopleViewController.m */,
+				81D5755A1FF64A6800476502 /* XJPeopleViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -539,10 +555,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B2A1521FC5907C003B97A0 /* LaunchScreen.storyboard in Resources */,
+				81D575611FF6523900476502 /* XJPeopleTableViewCell.xib in Resources */,
 				81137DA21FF5ED76000B873E /* XJguanzhufansTableViewCell.xib in Resources */,
 				18B2A1861FC595D7003B97A0 /* Images.xcassets in Resources */,
 				18B2A14F1FC5907C003B97A0 /* Assets.xcassets in Resources */,
 				18B2A14A1FC5907C003B97A0 /* Main.storyboard in Resources */,
+				81D5755C1FF64A6800476502 /* XJPeopleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,10 +645,12 @@
 				183A46751FC673ED0052596F /* NSDictionary+Addons.m in Sources */,
 				8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */,
 				18B2A1471FC5907C003B97A0 /* ViewController.m in Sources */,
+				81D5755B1FF64A6800476502 /* XJPeopleViewController.m in Sources */,
 				185937931FD3D717009EA7FA /* XJLauchMovieViewController.m in Sources */,
 				81137D9D1FF5E5E2000B873E /* XJFansViewController.m in Sources */,
 				8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */,
 				183A467A1FC678D40052596F /* UIColor+Addons.m in Sources */,
+				81D575601FF6523900476502 /* XJPeopleTableViewCell.m in Sources */,
 				183A46931FC6FDB30052596F /* MainCardInfo.m in Sources */,
 				183A46901FC6FC2A0052596F /* MainViewController.m in Sources */,
 				18B2A14D1FC5907C003B97A0 /* XJ_Letter.xcdatamodeld in Sources */,

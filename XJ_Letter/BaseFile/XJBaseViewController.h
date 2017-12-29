@@ -16,6 +16,13 @@
  *  @param action 方法(默认pop)
  */
 - (void)addCustomBackBarButtonItemWithTarget:(id)target action:(SEL)action;
+/**
+ *  定制的返回按钮(白色按钮)
+ *
+ *  @param target self
+ *  @param action 方法(默认pop)
+ */
+- (void)addCustomWhiteBackBarButtonItemWithTarget:(id)target action:(SEL)action;
 
 /**
  *  定制标题
