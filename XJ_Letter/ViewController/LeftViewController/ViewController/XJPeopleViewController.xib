@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -42,6 +43,15 @@
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSG-wI-SYc">
+                    <rect key="frame" x="0.0" y="64" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Xtg-pP-RIs"/>
+                        <constraint firstAttribute="width" constant="44" id="lUG-hd-RiU"/>
+                        <constraint firstAttribute="width" secondItem="uSG-wI-SYc" secondAttribute="height" multiplier="1:1" id="t0e-wc-aEC"/>
+                    </constraints>
+                    <state key="normal" image="navbar_return_my"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -52,14 +62,17 @@
                 <constraint firstAttribute="bottom" secondItem="JUU-yo-GEf" secondAttribute="bottom" constant="6" id="AMB-4j-H3h"/>
                 <constraint firstAttribute="trailing" secondItem="WRc-q4-4K9" secondAttribute="trailing" id="IGy-fB-fix"/>
                 <constraint firstItem="WRc-q4-4K9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JTe-3U-BgC"/>
+                <constraint firstItem="uSG-wI-SYc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MM5-l9-bSW"/>
                 <constraint firstItem="JUU-yo-GEf" firstAttribute="top" secondItem="WRc-q4-4K9" secondAttribute="bottom" constant="80" id="XT1-yT-cU9"/>
                 <constraint firstItem="Nzs-6y-uZE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Ycv-Jb-ULj"/>
                 <constraint firstItem="JUU-yo-GEf" firstAttribute="leading" secondItem="WRc-q4-4K9" secondAttribute="leading" id="ZNy-0H-7lF"/>
+                <constraint firstItem="uSG-wI-SYc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="sT2-9W-cJJ"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>
     </objects>
     <resources>
+        <image name="navbar_return_my" width="44" height="44"/>
         <image name="personal_bg" width="414" height="227"/>
     </resources>
 </document>
