@@ -30,6 +30,8 @@
 		18E93AC61FC7AFCD00832889 /* LZSwipeableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A46831FC6CCBF0052596F /* LZSwipeableView.m */; };
 		18E93AC71FC7AFD700832889 /* NSObject+LZSwipeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A46861FC6CCBF0052596F /* NSObject+LZSwipeCategory.m */; };
 		18E93ACA1FC7BA7C00832889 /* XJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E93AC91FC7BA7C00832889 /* XJBaseNavigationController.m */; };
+		810BB2D51FFBC1B4000F91F4 /* XJMyWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810BB2D31FFBC1B4000F91F4 /* XJMyWalletViewController.m */; };
+		810BB2D61FFBC1B4000F91F4 /* XJMyWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810BB2D41FFBC1B4000F91F4 /* XJMyWalletViewController.xib */; };
 		81137D9A1FF5E5D5000B873E /* XJGuanZhuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81137D991FF5E5D5000B873E /* XJGuanZhuViewController.m */; };
 		81137D9D1FF5E5E2000B873E /* XJFansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81137D9C1FF5E5E2000B873E /* XJFansViewController.m */; };
 		81137DA11FF5ED76000B873E /* XJguanzhufansTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81137D9F1FF5ED76000B873E /* XJguanzhufansTableViewCell.m */; };
@@ -118,6 +120,9 @@
 		18E93AC91FC7BA7C00832889 /* XJBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJBaseNavigationController.m; sourceTree = "<group>"; };
 		60C9C1D3316399AEBCDE0C26 /* Pods-XJ_Letter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJ_Letter.release.xcconfig"; path = "Pods/Target Support Files/Pods-XJ_Letter/Pods-XJ_Letter.release.xcconfig"; sourceTree = "<group>"; };
 		6E667DA63DC5DE01EBF2F0DE /* Pods-XJ_Letter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJ_Letter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XJ_Letter/Pods-XJ_Letter.debug.xcconfig"; sourceTree = "<group>"; };
+		810BB2D21FFBC1B4000F91F4 /* XJMyWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMyWalletViewController.h; sourceTree = "<group>"; };
+		810BB2D31FFBC1B4000F91F4 /* XJMyWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMyWalletViewController.m; sourceTree = "<group>"; };
+		810BB2D41FFBC1B4000F91F4 /* XJMyWalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJMyWalletViewController.xib; sourceTree = "<group>"; };
 		81137D981FF5E5D5000B873E /* XJGuanZhuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJGuanZhuViewController.h; sourceTree = "<group>"; };
 		81137D991FF5E5D5000B873E /* XJGuanZhuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJGuanZhuViewController.m; sourceTree = "<group>"; };
 		81137D9B1FF5E5E2000B873E /* XJFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJFansViewController.h; sourceTree = "<group>"; };
@@ -426,6 +431,9 @@
 				8116EE841FFB66E1003236F0 /* XJMyLetterViewController.h */,
 				8116EE851FFB66E1003236F0 /* XJMyLetterViewController.m */,
 				8116EE861FFB66E1003236F0 /* XJMyLetterViewController.xib */,
+				810BB2D21FFBC1B4000F91F4 /* XJMyWalletViewController.h */,
+				810BB2D31FFBC1B4000F91F4 /* XJMyWalletViewController.m */,
+				810BB2D41FFBC1B4000F91F4 /* XJMyWalletViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -562,6 +570,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810BB2D61FFBC1B4000F91F4 /* XJMyWalletViewController.xib in Resources */,
 				18B2A1521FC5907C003B97A0 /* LaunchScreen.storyboard in Resources */,
 				81D575611FF6523900476502 /* XJPeopleTableViewCell.xib in Resources */,
 				81137DA21FF5ED76000B873E /* XJguanzhufansTableViewCell.xib in Resources */,
@@ -645,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810BB2D51FFBC1B4000F91F4 /* XJMyWalletViewController.m in Sources */,
 				18E93AC71FC7AFD700832889 /* NSObject+LZSwipeCategory.m in Sources */,
 				81137D9A1FF5E5D5000B873E /* XJGuanZhuViewController.m in Sources */,
 				18E93AC61FC7AFCD00832889 /* LZSwipeableView.m in Sources */,

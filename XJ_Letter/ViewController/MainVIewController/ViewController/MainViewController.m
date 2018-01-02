@@ -15,6 +15,7 @@
 #import "XJGuanZhuViewController.h"
 #import "XJFansViewController.h"
 #import "XJMyLetterViewController.h"
+#import "XJMyWalletViewController.h"
 #define kColorBackground_Main  [UIColor colorWithHexString:@"#f7f7f7"]
 
 @interface MainViewController () <LZSwipeableViewDataSource,
@@ -144,6 +145,9 @@ LZSwipeableViewDelegate>
 }
 //钱包
 -(void)walletClick{
+    XJMyWalletViewController *MWV = [[XJMyWalletViewController alloc]init];
+    MWV.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:MWV animated:NO];
     
 }
 //我的信件
