@@ -22,6 +22,10 @@
     [self addCustomBackBarButtonItemWithTarget:self action:@selector(backUp)];
     [self.tableView reloadData];
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+   [self.navigationController.navigationBar setHidden:NO];
+}
 -(void)backUp{
     [self.navigationController popViewControllerAnimated:YES];
 }
