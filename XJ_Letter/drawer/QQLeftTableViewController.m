@@ -83,7 +83,34 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"点击了%@",self.dataArray[indexPath.row]);
+    switch (indexPath.row) {
+        case 0:{
+            [self searchClick];
+        }
+            break;
+        case 1:{
+            [self messageClick];
+        }
+            break;
+        case 2:{
+            [self walletClick];
+        }
+            break;
+        case 3:{
+            [self myletterClick];
+        }
+            break;
+        case 4:{
+            [self myCollectionClick];
+        }
+            break;
+        case 5:{
+            [self settingClick];
+        }
+            break;
+        default:
+            break;
+    }
     [self turnBackToMainViewConttoller];
 }
 
@@ -149,7 +176,7 @@
         self.guanzhuLabel.textColor = [UIColor colorWithHexString:@"#333333"];
         self.guanzhuLabel.textAlignment = NSTextAlignmentRight;
         self.guanzhuLabel.font = [UIFont systemFontOfSize:PXChange(40)];
-        self.guanzhuLabel.center =CGPointMake(self.iconImage.centerX-PXChange(42)-self.guanzhuLabel.width/2.0f,self.addressLabel.bottom+PXChange(44));
+        self.guanzhuLabel.center =CGPointMake(self.iconImage.centerX-PXChange(42)-self.guanzhuLabel.width/2.0f,self.addressLabel.bottom+PXChange(64));
         [_headerView addSubview:self.guanzhuLabel];
         
         UILabel *gLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
@@ -157,7 +184,7 @@
         gLabel.text = @"关注";
         gLabel.font = [UIFont systemFontOfSize:PXChange(28)];
         [gLabel sizeToFit];
-        gLabel.centerY = self.guanzhuLabel.bottom+PXChange(14)+gLabel.width/2.0f;
+        gLabel.centerY = self.guanzhuLabel.bottom+PXChange(4)+gLabel.width/2.0f;
         gLabel.right = self.guanzhuLabel.right;
         [_headerView addSubview:gLabel];
         
@@ -166,7 +193,7 @@
         self.fansLabel.textColor = [UIColor colorWithHexString:@"#333333"];
         self.fansLabel.textAlignment = NSTextAlignmentLeft;
         self.fansLabel.font = [UIFont systemFontOfSize:PXChange(40)];
-        self.fansLabel.center =CGPointMake(self.iconImage.centerX+PXChange(42)+self.fansLabel.width/2.0f, self.addressLabel.bottom+PXChange(44));
+        self.fansLabel.center =CGPointMake(self.iconImage.centerX+PXChange(42)+self.fansLabel.width/2.0f, self.addressLabel.bottom+PXChange(64));
         [_headerView addSubview:self.fansLabel];
         
         UILabel *flabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
@@ -174,7 +201,7 @@
         flabel.text = @"粉丝";
         flabel.font = [UIFont systemFontOfSize:PXChange(28)];
         [flabel sizeToFit];
-        flabel.centerY = self.fansLabel.bottom+PXChange(14)+gLabel.width/2.0f;
+        flabel.centerY = self.fansLabel.bottom+PXChange(4)+gLabel.width/2.0f;
         flabel.left = self.fansLabel.left;
         [_headerView addSubview:flabel];
         
@@ -193,26 +220,53 @@
 }
 //关注
 -(void)guanzhuClick{
-    NSLog(@"点击了 关注");
     [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
     [[NSNotificationCenter defaultCenter] postNotificationName:GuanzhuClick object:nil];
 }
 //粉丝
 -(void)fansClick{
-    NSLog(@"点击了 粉丝");
     [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
     [[NSNotificationCenter defaultCenter] postNotificationName:FansClick object:nil];
-    
+}
+//搜索
+-(void)searchClick{
+    [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SearchClick object:nil];
+}
+//消息
+-(void)messageClick{
+    [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MessageClick object:nil];
+}
+//钱包
+-(void)walletClick{
+    [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:WalletClick object:nil];
+}
+//我的信件
+-(void)myletterClick{
+    [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MyletterClick object:nil];
+}
+//我的收藏
+-(void)myCollectionClick{
+    [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MyCollectionClick object:nil];
+}
+// 设置
+-(void)settingClick{
+    [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SettingClick object:nil];
 }
 - (NSMutableArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"搜索",@"消息",@"钱包",@"我的信件",@"设置", nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"搜索",@"消息",@"钱包",@"我的信件",@"我的收藏",@"设置", nil];
     }
     return _dataArray;
 }
 - (NSMutableArray *)imgDataArr{
     if (!_imgDataArr) {
-        _imgDataArr = [NSMutableArray arrayWithObjects:@"my_original-image",@"my_email",@"my_wallet",@"my_email",@"my_set", nil];
+        _imgDataArr = [NSMutableArray arrayWithObjects:@"my_original-image",@"my_email",@"my_wallet",@"my_email",@"favorite",@"my_set", nil];
     }
     return _imgDataArr;
 }

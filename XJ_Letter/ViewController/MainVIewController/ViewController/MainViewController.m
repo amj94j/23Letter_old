@@ -14,6 +14,7 @@
 #import "QQDrawerViewController.h"
 #import "XJGuanZhuViewController.h"
 #import "XJFansViewController.h"
+#import "XJMyLetterViewController.h"
 #define kColorBackground_Main  [UIColor colorWithHexString:@"#f7f7f7"]
 
 @interface MainViewController () <LZSwipeableViewDataSource,
@@ -49,14 +50,14 @@ LZSwipeableViewDelegate>
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    self.tabBarController.tabBar.hidden =YES;
-//    self.view.frame =CGRectMake(0,64,ScreenWidth,ScreenHeight+64);
-//    [self m_customTabBarHidden];
+    //    self.tabBarController.tabBar.hidden =YES;
+    //    self.view.frame =CGRectMake(0,64,ScreenWidth,ScreenHeight+64);
+    //    [self m_customTabBarHidden];
     [UITabBar appearance].clipsToBounds = YES;
     [UINavigationBar appearance].clipsToBounds = YES;
     [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
     [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
-//    [[UITabBar appearance] setTintColor:ButtonColor];
+    //    [[UITabBar appearance] setTintColor:ButtonColor];
     [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbarImage.png"]];
     // [UITabBar appearance].clipsToBounds = YES; // 添加的图片大小不匹配的话，加上此句，屏蔽掉tabbar多余部分
     [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tabbarImage.png"]];
@@ -119,14 +120,45 @@ LZSwipeableViewDelegate>
 -(void)configNotifation{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(guanzhuClick) name:GuanzhuClick object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fansClick) name:FansClick object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchClick) name:SearchClick object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(messageClick) name:MessageClick object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(walletClick) name:WalletClick object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(myletterClick) name:MyletterClick object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(myCollectionClick) name:MyCollectionClick object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(settingClick) name:SettingClick object:nil];
 }
 //抽屉菜单点击事件
 -(void)leftBarClick{
-    NSLog(@"点击了左侧按钮");
     [[QQDrawerViewController shareDrawerViewController] openDrawerWithOpenDuration:0.2];
 }
 -(void)rightBarClick{
     NSLog(@"点击了右侧按钮");
+}
+//搜索
+-(void)searchClick{
+  
+}
+//消息
+-(void)messageClick{
+    
+}
+//钱包
+-(void)walletClick{
+    
+}
+//我的信件
+-(void)myletterClick{
+    XJMyLetterViewController *XJC = [[XJMyLetterViewController alloc]init];
+    XJC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:XJC animated:NO];
+}
+//我的收藏
+-(void)myCollectionClick{
+    
+}
+// 设置
+-(void)settingClick{
+    
 }
 -(void)guanzhuClick{
     XJGuanZhuViewController *guanzhuVC = [XJGuanZhuViewController new];
@@ -149,7 +181,7 @@ LZSwipeableViewDelegate>
 }
 
 - (LZSwipeableViewCell *)swipeableView:(LZSwipeableView *)swipeableView cellForIndex:(NSInteger)index {
-     MainSwipeCardCell *cell = [swipeableView dequeueReusableCellWithIdentifier:NSStringFromClass([MainSwipeCardCell class])];
+    MainSwipeCardCell *cell = [swipeableView dequeueReusableCellWithIdentifier:NSStringFromClass([MainSwipeCardCell class])];
     cell.cardInfo = self.cardInfoList[index];
     
     cell.layer.contents = (id)[UIImage imageNamed:@"home_img"].CGImage;
@@ -179,17 +211,17 @@ LZSwipeableViewDelegate>
 - (UIView *)showFooterView {
     MainBottomToolView *bottomView = [MainBottomToolView new];
     bottomView.backgroundColor = kColorBackground_Main;
-//    bottomView.superVCtl = self;
-//    bottomView.delegate  = self;
+    //    bottomView.superVCtl = self;
+    //    bottomView.delegate  = self;
     return bottomView;
 }
 
 - (CGFloat)heightForFooterView:(LZSwipeableView *)swipeableView{
-        return PXChange(350);
+    return PXChange(350);
 }
 
 - (UIView *)headerViewForSwipeableView:(LZSwipeableView *)swipeableView{
-        return [self showHeaderView];
+    return [self showHeaderView];
     return nil;
 }
 
@@ -199,7 +231,7 @@ LZSwipeableViewDelegate>
 
 
 - (CGFloat)heightForHeaderView:(LZSwipeableView *)swipeableView{
-        return PXChange(40);
+    return PXChange(40);
 }
 
 // 拉到最后一个
@@ -233,11 +265,11 @@ LZSwipeableViewDelegate>
 }
 
 - (void)knackBottomToolViewDidShareBtnClick:(MainCardInfo *)idInfo{
-        [self.swipeableView removeTopCardViewFromSwipe:LZSwipeableViewCellSwipeDirectionBottom];
-//    }else{
-//        [self.swipeableView removeTopCardViewFromSwipe:LZSwipeableViewCellSwipeDirectionTop];
-//    }
-
+    [self.swipeableView removeTopCardViewFromSwipe:LZSwipeableViewCellSwipeDirectionBottom];
+    //    }else{
+    //        [self.swipeableView removeTopCardViewFromSwipe:LZSwipeableViewCellSwipeDirectionTop];
+    //    }
+    
 }
 
 
@@ -247,13 +279,13 @@ LZSwipeableViewDelegate>
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

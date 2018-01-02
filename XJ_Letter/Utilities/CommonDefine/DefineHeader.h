@@ -17,4 +17,10 @@
 //通知相关定义
 #define  FansClick  @"FansClick"
 #define  GuanzhuClick  @"GuanzhuClick"
+#define  SearchClick  @"SearchClick"
+#define  MessageClick  @"MessageClick"
+#define  WalletClick  @"WalletClick"
+#define  MyletterClick  @"MyletterClick"
+#define  MyCollectionClick  @"MyCollectionClick"
+#define  SettingClick  @"SettingClick"
 #endif /* DefineHeader_h */

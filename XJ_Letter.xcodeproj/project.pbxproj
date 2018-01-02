@@ -34,6 +34,8 @@
 		81137D9D1FF5E5E2000B873E /* XJFansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81137D9C1FF5E5E2000B873E /* XJFansViewController.m */; };
 		81137DA11FF5ED76000B873E /* XJguanzhufansTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81137D9F1FF5ED76000B873E /* XJguanzhufansTableViewCell.m */; };
 		81137DA21FF5ED76000B873E /* XJguanzhufansTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81137DA01FF5ED76000B873E /* XJguanzhufansTableViewCell.xib */; };
+		8116EE871FFB66E1003236F0 /* XJMyLetterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8116EE851FFB66E1003236F0 /* XJMyLetterViewController.m */; };
+		8116EE881FFB66E1003236F0 /* XJMyLetterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8116EE861FFB66E1003236F0 /* XJMyLetterViewController.xib */; };
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
@@ -123,6 +125,9 @@
 		81137D9E1FF5ED76000B873E /* XJguanzhufansTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJguanzhufansTableViewCell.h; sourceTree = "<group>"; };
 		81137D9F1FF5ED76000B873E /* XJguanzhufansTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJguanzhufansTableViewCell.m; sourceTree = "<group>"; };
 		81137DA01FF5ED76000B873E /* XJguanzhufansTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJguanzhufansTableViewCell.xib; sourceTree = "<group>"; };
+		8116EE841FFB66E1003236F0 /* XJMyLetterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMyLetterViewController.h; sourceTree = "<group>"; };
+		8116EE851FFB66E1003236F0 /* XJMyLetterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMyLetterViewController.m; sourceTree = "<group>"; };
+		8116EE861FFB66E1003236F0 /* XJMyLetterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJMyLetterViewController.xib; sourceTree = "<group>"; };
 		818663751FF1357300EEF540 /* QQLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLeftTableViewController.h; sourceTree = "<group>"; };
 		818663761FF1357300EEF540 /* QQLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLeftTableViewController.m; sourceTree = "<group>"; };
 		818663771FF1357300EEF540 /* QQDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDrawerViewController.h; sourceTree = "<group>"; };
@@ -418,6 +423,9 @@
 				81D575581FF64A6800476502 /* XJPeopleViewController.h */,
 				81D575591FF64A6800476502 /* XJPeopleViewController.m */,
 				81D5755A1FF64A6800476502 /* XJPeopleViewController.xib */,
+				8116EE841FFB66E1003236F0 /* XJMyLetterViewController.h */,
+				8116EE851FFB66E1003236F0 /* XJMyLetterViewController.m */,
+				8116EE861FFB66E1003236F0 /* XJMyLetterViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -558,6 +566,7 @@
 				81D575611FF6523900476502 /* XJPeopleTableViewCell.xib in Resources */,
 				81137DA21FF5ED76000B873E /* XJguanzhufansTableViewCell.xib in Resources */,
 				18B2A1861FC595D7003B97A0 /* Images.xcassets in Resources */,
+				8116EE881FFB66E1003236F0 /* XJMyLetterViewController.xib in Resources */,
 				18B2A14F1FC5907C003B97A0 /* Assets.xcassets in Resources */,
 				18B2A14A1FC5907C003B97A0 /* Main.storyboard in Resources */,
 				81D5755C1FF64A6800476502 /* XJPeopleViewController.xib in Resources */,
@@ -642,6 +651,7 @@
 				1876F4E41FCE8972004F8E18 /* MainBottomToolView.m in Sources */,
 				183A46961FC6FDCB0052596F /* MainSwipeCardCell.m in Sources */,
 				183A46801FC67D600052596F /* UIImage+Addons.m in Sources */,
+				8116EE871FFB66E1003236F0 /* XJMyLetterViewController.m in Sources */,
 				183A46751FC673ED0052596F /* NSDictionary+Addons.m in Sources */,
 				8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */,
 				18B2A1471FC5907C003B97A0 /* ViewController.m in Sources */,
