@@ -99,7 +99,7 @@
                               action:(SEL)action {
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    //    [button setFrame:CGRectMake(0, 0, PXChange(44), PXChange(44))];
+    [button setFrame:CGRectMake(0, 0, PXChange(44), PXChange(44))];
     [button setImage:image forState:UIControlStateNormal];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc] initWithCustomView:button];

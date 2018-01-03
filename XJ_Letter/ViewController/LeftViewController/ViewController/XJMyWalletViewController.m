@@ -7,8 +7,11 @@
 //
 
 #import "XJMyWalletViewController.h"
-
+#import "XJJiaoYiJiLuViewController.h"
 @interface XJMyWalletViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (weak, nonatomic) IBOutlet UIButton *chongzhiBtn;
+@property (weak, nonatomic) IBOutlet UIButton *tixianBtn;
 
 @end
 
@@ -16,19 +19,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addCustomTitleWithTitle:@"我的钱包"];
-    [self addCustomBackBarButtonItemWithTarget:self action:@selector(backUp)];
     [self setNavigationBarStyle];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#f1f4f9"];
+    self.moneyLabel.text = [NSString stringWithFormat:@"¥  %@",@"1588629.00"];
+    self.chongzhiBtn.clipsToBounds = YES;
+    self.tixianBtn.clipsToBounds = YES;
+    self.chongzhiBtn.layer.cornerRadius = 5;
+    self.tixianBtn.layer.cornerRadius = 5;
 }
 -(void)setNavigationBarStyle{
-    UIButton *jiaoyiBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, PXChange(100), PXChange(88))];
-    [jiaoyiBtn setTitle:@"交易记录" forState:UIControlStateNormal];
-    [jiaoyiBtn addTarget:self action:@selector(jiaoyiClick) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *jiaoyiBtnItem = [[UIBarButtonItem alloc]initWithCustomView:jiaoyiBtn];
-//    self.navigationController.navigationBar.ri
+    [self addCustomTitleWithTitle:@"钱包"];
+    [self addCustomBackBarButtonItemWithTarget:self action:@selector(backUp)];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:CGRectMake(0, 0, PXChange(100), PXChange(44))];
+    [button setTitle:@"交易记录" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor colorWithHexString:@"#2d2d2d"] forState:UIControlStateNormal];
+    [button addTarget:self  action:@selector(jiaoyiClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *jiaoyiBtnItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = jiaoyiBtnItem;
 }
 -(void)jiaoyiClick{
-    NSLog(@"交易记录");
+    XJJiaoYiJiLuViewController  *xjv = [[XJJiaoYiJiLuViewController alloc]init];
+    [self.navigationController pushViewController:xjv animated:YES];
 }
 - (void)backUp{
     [self.navigationController popViewControllerAnimated:YES];

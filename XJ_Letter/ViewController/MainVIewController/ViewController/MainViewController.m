@@ -73,7 +73,7 @@ LZSwipeableViewDelegate>
     //
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = kColorBackground_Main;
+    self.view.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.swipeableView];
     self.swipeableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.swipeableView registerClass:[MainSwipeCardCell class] forCellReuseIdentifier:NSStringFromClass([MainSwipeCardCell class])];
@@ -213,10 +213,10 @@ LZSwipeableViewDelegate>
 }
 
 - (UIView *)showFooterView {
-    MainBottomToolView *bottomView = [MainBottomToolView new];
+    MainBottomToolView *bottomView = [[MainBottomToolView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-self.swipeableView.height)];
     bottomView.backgroundColor = kColorBackground_Main;
-    //    bottomView.superVCtl = self;
-    //    bottomView.delegate  = self;
+//        bottomView.superVCtl = self;
+//        bottomView.delegate  = self;
     return bottomView;
 }
 
@@ -225,7 +225,7 @@ LZSwipeableViewDelegate>
 }
 
 - (UIView *)headerViewForSwipeableView:(LZSwipeableView *)swipeableView{
-    return [self showHeaderView];
+//    return [self showHeaderView];
     return nil;
 }
 

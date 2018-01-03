@@ -38,6 +38,10 @@
 		81137DA21FF5ED76000B873E /* XJguanzhufansTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81137DA01FF5ED76000B873E /* XJguanzhufansTableViewCell.xib */; };
 		8116EE871FFB66E1003236F0 /* XJMyLetterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8116EE851FFB66E1003236F0 /* XJMyLetterViewController.m */; };
 		8116EE881FFB66E1003236F0 /* XJMyLetterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8116EE861FFB66E1003236F0 /* XJMyLetterViewController.xib */; };
+		812222EE1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 812222EC1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.m */; };
+		812222EF1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812222ED1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib */; };
+		812222F31FFCBF9700C184C2 /* XJJYJLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 812222F11FFCBF9700C184C2 /* XJJYJLTableViewCell.m */; };
+		812222F41FFCBF9700C184C2 /* XJJYJLTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812222F21FFCBF9700C184C2 /* XJJYJLTableViewCell.xib */; };
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
@@ -133,6 +137,12 @@
 		8116EE841FFB66E1003236F0 /* XJMyLetterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJMyLetterViewController.h; sourceTree = "<group>"; };
 		8116EE851FFB66E1003236F0 /* XJMyLetterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJMyLetterViewController.m; sourceTree = "<group>"; };
 		8116EE861FFB66E1003236F0 /* XJMyLetterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJMyLetterViewController.xib; sourceTree = "<group>"; };
+		812222EB1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJJiaoYiJiLuViewController.h; sourceTree = "<group>"; };
+		812222EC1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJJiaoYiJiLuViewController.m; sourceTree = "<group>"; };
+		812222ED1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJJiaoYiJiLuViewController.xib; sourceTree = "<group>"; };
+		812222F01FFCBF9700C184C2 /* XJJYJLTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJJYJLTableViewCell.h; sourceTree = "<group>"; };
+		812222F11FFCBF9700C184C2 /* XJJYJLTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJJYJLTableViewCell.m; sourceTree = "<group>"; };
+		812222F21FFCBF9700C184C2 /* XJJYJLTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJJYJLTableViewCell.xib; sourceTree = "<group>"; };
 		818663751FF1357300EEF540 /* QQLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLeftTableViewController.h; sourceTree = "<group>"; };
 		818663761FF1357300EEF540 /* QQLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLeftTableViewController.m; sourceTree = "<group>"; };
 		818663771FF1357300EEF540 /* QQDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDrawerViewController.h; sourceTree = "<group>"; };
@@ -414,6 +424,9 @@
 				81D5755D1FF6523900476502 /* XJPeopleTableViewCell.h */,
 				81D5755E1FF6523900476502 /* XJPeopleTableViewCell.m */,
 				81D5755F1FF6523900476502 /* XJPeopleTableViewCell.xib */,
+				812222F01FFCBF9700C184C2 /* XJJYJLTableViewCell.h */,
+				812222F11FFCBF9700C184C2 /* XJJYJLTableViewCell.m */,
+				812222F21FFCBF9700C184C2 /* XJJYJLTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +447,9 @@
 				810BB2D21FFBC1B4000F91F4 /* XJMyWalletViewController.h */,
 				810BB2D31FFBC1B4000F91F4 /* XJMyWalletViewController.m */,
 				810BB2D41FFBC1B4000F91F4 /* XJMyWalletViewController.xib */,
+				812222EB1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.h */,
+				812222EC1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.m */,
+				812222ED1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -577,7 +593,9 @@
 				18B2A1861FC595D7003B97A0 /* Images.xcassets in Resources */,
 				8116EE881FFB66E1003236F0 /* XJMyLetterViewController.xib in Resources */,
 				18B2A14F1FC5907C003B97A0 /* Assets.xcassets in Resources */,
+				812222EF1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib in Resources */,
 				18B2A14A1FC5907C003B97A0 /* Main.storyboard in Resources */,
+				812222F41FFCBF9700C184C2 /* XJJYJLTableViewCell.xib in Resources */,
 				81D5755C1FF64A6800476502 /* XJPeopleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +677,7 @@
 				81137D9A1FF5E5D5000B873E /* XJGuanZhuViewController.m in Sources */,
 				18E93AC61FC7AFCD00832889 /* LZSwipeableView.m in Sources */,
 				1876F4E41FCE8972004F8E18 /* MainBottomToolView.m in Sources */,
+				812222F31FFCBF9700C184C2 /* XJJYJLTableViewCell.m in Sources */,
 				183A46961FC6FDCB0052596F /* MainSwipeCardCell.m in Sources */,
 				183A46801FC67D600052596F /* UIImage+Addons.m in Sources */,
 				8116EE871FFB66E1003236F0 /* XJMyLetterViewController.m in Sources */,
@@ -671,6 +690,7 @@
 				8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */,
 				183A467A1FC678D40052596F /* UIColor+Addons.m in Sources */,
 				81D575601FF6523900476502 /* XJPeopleTableViewCell.m in Sources */,
+				812222EE1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.m in Sources */,
 				183A46931FC6FDB30052596F /* MainCardInfo.m in Sources */,
 				183A46901FC6FC2A0052596F /* MainViewController.m in Sources */,
 				18B2A14D1FC5907C003B97A0 /* XJ_Letter.xcdatamodeld in Sources */,

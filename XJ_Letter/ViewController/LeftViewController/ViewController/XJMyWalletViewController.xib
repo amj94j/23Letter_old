@@ -1,13 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XJMyWalletViewController">
             <connections>
+                <outlet property="chongzhiBtn" destination="ThI-Im-aAh" id="Rgh-ea-qpc"/>
+                <outlet property="moneyLabel" destination="Jc8-M9-i3H" id="ftI-zZ-rBM"/>
+                <outlet property="tixianBtn" destination="hWm-42-BXJ" id="qeb-7H-4hQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +22,74 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet_icon" translatesAutoresizingMaskIntoConstraints="NO" id="YDd-yb-hcz">
+                    <rect key="frame" x="119.5" y="38" width="136" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="136" id="2e6-32-31s"/>
+                        <constraint firstAttribute="width" secondItem="YDd-yb-hcz" secondAttribute="height" multiplier="34:25" id="b7a-rz-ss3"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的钱包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KZ-rz-Pe8">
+                    <rect key="frame" x="149.5" y="180" width="76" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Kwm-uz-VuW"/>
+                        <constraint firstAttribute="width" constant="76" id="n9h-FJ-B43"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥ 658.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-M9-i3H">
+                    <rect key="frame" x="56.5" y="232" width="262" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="262" id="IBE-9Z-t0y"/>
+                        <constraint firstAttribute="height" constant="35" id="Qxx-eZ-WTA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThI-Im-aAh">
+                    <rect key="frame" x="15" y="305" width="345" height="44"/>
+                    <color key="backgroundColor" red="0.5607843137254902" green="0.59215686274509804" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="gmI-ws-T4S"/>
+                    </constraints>
+                    <state key="normal" title="充值">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWm-42-BXJ">
+                    <rect key="frame" x="15" y="364" width="345" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="8dB-J1-3o1"/>
+                    </constraints>
+                    <state key="normal" title="提现">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <constraints>
+                <constraint firstItem="YDd-yb-hcz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4M0-T9-0e7"/>
+                <constraint firstItem="Jc8-M9-i3H" firstAttribute="top" secondItem="8KZ-rz-Pe8" secondAttribute="bottom" constant="31" id="9eb-Hr-aB7"/>
+                <constraint firstItem="YDd-yb-hcz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="38" id="DpL-1Z-gS0"/>
+                <constraint firstItem="8KZ-rz-Pe8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HQi-Tm-aBJ"/>
+                <constraint firstItem="8KZ-rz-Pe8" firstAttribute="top" secondItem="YDd-yb-hcz" secondAttribute="bottom" constant="42" id="NaC-yL-sGN"/>
+                <constraint firstAttribute="trailing" secondItem="hWm-42-BXJ" secondAttribute="trailing" constant="15" id="OE7-WT-4xi"/>
+                <constraint firstItem="ThI-Im-aAh" firstAttribute="top" secondItem="Jc8-M9-i3H" secondAttribute="bottom" constant="38" id="RR3-Lh-Qcp"/>
+                <constraint firstItem="ThI-Im-aAh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="SwN-mt-cSa"/>
+                <constraint firstItem="hWm-42-BXJ" firstAttribute="top" secondItem="ThI-Im-aAh" secondAttribute="bottom" constant="15" id="hHG-tW-ceF"/>
+                <constraint firstAttribute="trailing" secondItem="ThI-Im-aAh" secondAttribute="trailing" constant="15" id="hLy-M9-rgJ"/>
+                <constraint firstItem="hWm-42-BXJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="onE-EA-DAQ"/>
+                <constraint firstItem="Jc8-M9-i3H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zwF-Zm-hcN"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="wallet_icon" width="136" height="100"/>
+    </resources>
 </document>
