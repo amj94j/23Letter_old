@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XJSettingViewController">
+            <connections>
+                <outlet property="logOutBtn" destination="dnP-cl-M4Q" id="NPC-P1-uuo"/>
+                <outlet property="tabView" destination="YTy-vF-MG4" id="30i-D2-nGw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YTy-vF-MG4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="U1v-sC-Xxn"/>
+                        <outlet property="delegate" destination="-1" id="BZC-21-M7q"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnP-cl-M4Q">
+                    <rect key="frame" x="15" y="557" width="345" height="44"/>
+                    <color key="backgroundColor" red="0.5607843137254902" green="0.59215686274509804" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="HYW-x3-MzC"/>
+                    </constraints>
+                    <state key="normal" title="退出当前账号">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="logOutBtnClick:" destination="-1" eventType="touchUpInside" id="ejf-Ho-T5f"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YTy-vF-MG4" secondAttribute="bottom" constant="150" id="2vf-k8-Cen"/>
+                <constraint firstItem="YTy-vF-MG4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6LL-5N-j30"/>
+                <constraint firstItem="dnP-cl-M4Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="97C-f2-q5F"/>
+                <constraint firstItem="YTy-vF-MG4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JIv-e0-QWm"/>
+                <constraint firstAttribute="trailing" secondItem="dnP-cl-M4Q" secondAttribute="trailing" constant="15" id="Nuj-D2-PEo"/>
+                <constraint firstItem="dnP-cl-M4Q" firstAttribute="top" secondItem="YTy-vF-MG4" secondAttribute="bottom" constant="40" id="RLY-bM-cmm"/>
+                <constraint firstItem="YTy-vF-MG4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UxA-RD-v8j"/>
+                <constraint firstAttribute="trailing" secondItem="YTy-vF-MG4" secondAttribute="trailing" id="cl4-tb-Gbg"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

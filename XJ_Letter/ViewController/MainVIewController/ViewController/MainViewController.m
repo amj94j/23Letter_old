@@ -16,6 +16,7 @@
 #import "XJFansViewController.h"
 #import "XJMyLetterViewController.h"
 #import "XJMyWalletViewController.h"
+#import "XJSettingViewController.h"
 #define kColorBackground_Main  [UIColor colorWithHexString:@"#f7f7f7"]
 
 @interface MainViewController () <LZSwipeableViewDataSource,
@@ -162,7 +163,9 @@ LZSwipeableViewDelegate>
 }
 // 设置
 -(void)settingClick{
-    
+    XJSettingViewController *xjc = [[XJSettingViewController alloc]init];
+    xjc.hidesBottomBarWhenPushed = YES;
+     [self.navigationController pushViewController:xjc animated:NO];
 }
 -(void)guanzhuClick{
     XJGuanZhuViewController *guanzhuVC = [XJGuanZhuViewController new];

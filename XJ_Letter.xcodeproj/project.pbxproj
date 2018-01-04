@@ -45,6 +45,8 @@
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
+		81D1D5F31FFDD41300998BFB /* XJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D5F11FFDD41300998BFB /* XJSettingViewController.m */; };
+		81D1D5F41FFDD41300998BFB /* XJSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D1D5F21FFDD41300998BFB /* XJSettingViewController.xib */; };
 		81D5755B1FF64A6800476502 /* XJPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D575591FF64A6800476502 /* XJPeopleViewController.m */; };
 		81D5755C1FF64A6800476502 /* XJPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D5755A1FF64A6800476502 /* XJPeopleViewController.xib */; };
 		81D575601FF6523900476502 /* XJPeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D5755E1FF6523900476502 /* XJPeopleTableViewCell.m */; };
@@ -149,6 +151,9 @@
 		818663781FF1357400EEF540 /* QQMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQMainTabBarController.h; sourceTree = "<group>"; };
 		818663791FF1357400EEF540 /* QQDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQDrawerViewController.m; sourceTree = "<group>"; };
 		8186637A1FF1357400EEF540 /* QQMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQMainTabBarController.m; sourceTree = "<group>"; };
+		81D1D5F01FFDD41300998BFB /* XJSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSettingViewController.h; sourceTree = "<group>"; };
+		81D1D5F11FFDD41300998BFB /* XJSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJSettingViewController.m; sourceTree = "<group>"; };
+		81D1D5F21FFDD41300998BFB /* XJSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJSettingViewController.xib; sourceTree = "<group>"; };
 		81D575581FF64A6800476502 /* XJPeopleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPeopleViewController.h; sourceTree = "<group>"; };
 		81D575591FF64A6800476502 /* XJPeopleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPeopleViewController.m; sourceTree = "<group>"; };
 		81D5755A1FF64A6800476502 /* XJPeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJPeopleViewController.xib; sourceTree = "<group>"; };
@@ -450,6 +455,9 @@
 				812222EB1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.h */,
 				812222EC1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.m */,
 				812222ED1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib */,
+				81D1D5F01FFDD41300998BFB /* XJSettingViewController.h */,
+				81D1D5F11FFDD41300998BFB /* XJSettingViewController.m */,
+				81D1D5F21FFDD41300998BFB /* XJSettingViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -593,6 +601,7 @@
 				18B2A1861FC595D7003B97A0 /* Images.xcassets in Resources */,
 				8116EE881FFB66E1003236F0 /* XJMyLetterViewController.xib in Resources */,
 				18B2A14F1FC5907C003B97A0 /* Assets.xcassets in Resources */,
+				81D1D5F41FFDD41300998BFB /* XJSettingViewController.xib in Resources */,
 				812222EF1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib in Resources */,
 				18B2A14A1FC5907C003B97A0 /* Main.storyboard in Resources */,
 				812222F41FFCBF9700C184C2 /* XJJYJLTableViewCell.xib in Resources */,
@@ -695,6 +704,7 @@
 				183A46901FC6FC2A0052596F /* MainViewController.m in Sources */,
 				18B2A14D1FC5907C003B97A0 /* XJ_Letter.xcdatamodeld in Sources */,
 				8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */,
+				81D1D5F31FFDD41300998BFB /* XJSettingViewController.m in Sources */,
 				18E93ACA1FC7BA7C00832889 /* XJBaseNavigationController.m in Sources */,
 				18B2A1551FC5907C003B97A0 /* main.m in Sources */,
 				18B2A1441FC5907C003B97A0 /* AppDelegate.m in Sources */,
