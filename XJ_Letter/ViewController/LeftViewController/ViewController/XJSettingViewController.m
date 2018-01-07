@@ -7,7 +7,8 @@
 //
 
 #import "XJSettingViewController.h"
-
+#import "XJModifyNickNameViewController.h"
+#import "XJModefyAddressViewController.h"
 @interface XJSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tabView;
 @property (strong,nonatomic)NSMutableArray *dateSource;
@@ -133,9 +134,15 @@
 }
 -(void)modifyNickName{
     //修改昵称
+    XJModifyNickNameViewController * mvc = [[XJModifyNickNameViewController alloc]init];
+    mvc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 -(void)modifyAddress{
     //修改地址
+    XJModefyAddressViewController *mac = [[XJModefyAddressViewController alloc]init];
+    mac.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:mac animated:YES];
 }
 -(void)changPassWord{
     //修改密码

@@ -6,5 +6,6 @@ target ‘XJ_Letter’ do
     pod 'SDWebImage', '~> 4.2.2'
     pod 'JSONModel', '~> 1.7.0'
     pod 'HYBNetworking', '~> 3.3.1'
-    
+    pod 'SDAutoLayout'
+    pod 'MJExtension', '~> 3.0.13'
 end

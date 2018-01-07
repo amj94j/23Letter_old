@@ -37,11 +37,6 @@
     [self removeNavigationBottonLine];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)removeNavigationBottonLine
 {
     //去除uinavogation下边的底线；
@@ -127,6 +122,10 @@
 // 设置导航栏的样式
 - (void)setNavigationBarStyle {
     
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
 }
 - (void)RemoveNavigationBottomLine{
     //    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:kColor_MAIN] size:CGSizeMake(ScreenWidth, PXChange(2))] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
