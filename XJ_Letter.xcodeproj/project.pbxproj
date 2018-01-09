@@ -46,6 +46,9 @@
 		812222EF1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812222ED1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib */; };
 		812222F31FFCBF9700C184C2 /* XJJYJLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 812222F11FFCBF9700C184C2 /* XJJYJLTableViewCell.m */; };
 		812222F41FFCBF9700C184C2 /* XJJYJLTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812222F21FFCBF9700C184C2 /* XJJYJLTableViewCell.xib */; };
+		817D42322004A31A00B3A2A7 /* XJHelpFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817D42312004A31A00B3A2A7 /* XJHelpFeedBackViewController.m */; };
+		817D42352004A4AA00B3A2A7 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817D42342004A4AA00B3A2A7 /* PlaceholderTextView.m */; };
+		817D42382004AFA200B3A2A7 /* XJModifyPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817D42372004AFA200B3A2A7 /* XJModifyPassWordViewController.m */; };
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
@@ -156,6 +159,12 @@
 		812222F01FFCBF9700C184C2 /* XJJYJLTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJJYJLTableViewCell.h; sourceTree = "<group>"; };
 		812222F11FFCBF9700C184C2 /* XJJYJLTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJJYJLTableViewCell.m; sourceTree = "<group>"; };
 		812222F21FFCBF9700C184C2 /* XJJYJLTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJJYJLTableViewCell.xib; sourceTree = "<group>"; };
+		817D42302004A31A00B3A2A7 /* XJHelpFeedBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJHelpFeedBackViewController.h; sourceTree = "<group>"; };
+		817D42312004A31A00B3A2A7 /* XJHelpFeedBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJHelpFeedBackViewController.m; sourceTree = "<group>"; };
+		817D42332004A4AA00B3A2A7 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		817D42342004A4AA00B3A2A7 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		817D42362004AFA200B3A2A7 /* XJModifyPassWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJModifyPassWordViewController.h; sourceTree = "<group>"; };
+		817D42372004AFA200B3A2A7 /* XJModifyPassWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJModifyPassWordViewController.m; sourceTree = "<group>"; };
 		818663751FF1357300EEF540 /* QQLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLeftTableViewController.h; sourceTree = "<group>"; };
 		818663761FF1357300EEF540 /* QQLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLeftTableViewController.m; sourceTree = "<group>"; };
 		818663771FF1357300EEF540 /* QQDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDrawerViewController.h; sourceTree = "<group>"; };
@@ -274,6 +283,10 @@
 				81214AF12001EC8A0053FD0A /* XJModifyNickNameViewController.m */,
 				81214AF32001FEFA0053FD0A /* XJModefyAddressViewController.h */,
 				81214AF42001FEFA0053FD0A /* XJModefyAddressViewController.m */,
+				817D42302004A31A00B3A2A7 /* XJHelpFeedBackViewController.h */,
+				817D42312004A31A00B3A2A7 /* XJHelpFeedBackViewController.m */,
+				817D42362004AFA200B3A2A7 /* XJModifyPassWordViewController.h */,
+				817D42372004AFA200B3A2A7 /* XJModifyPassWordViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -365,6 +378,8 @@
 		18B2A17B1FC592AF003B97A0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				817D42332004A4AA00B3A2A7 /* PlaceholderTextView.h */,
+				817D42342004A4AA00B3A2A7 /* PlaceholderTextView.m */,
 				183A46811FC6CCBF0052596F /* LZSwipeableView */,
 			);
 			path = Vendor;
@@ -712,6 +727,7 @@
 				8116EE871FFB66E1003236F0 /* XJMyLetterViewController.m in Sources */,
 				183A46751FC673ED0052596F /* NSDictionary+Addons.m in Sources */,
 				8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */,
+				817D42322004A31A00B3A2A7 /* XJHelpFeedBackViewController.m in Sources */,
 				18B2A1471FC5907C003B97A0 /* ViewController.m in Sources */,
 				81D5755B1FF64A6800476502 /* XJPeopleViewController.m in Sources */,
 				185937931FD3D717009EA7FA /* XJLauchMovieViewController.m in Sources */,
@@ -721,6 +737,7 @@
 				81214AF22001EC8A0053FD0A /* XJModifyNickNameViewController.m in Sources */,
 				81D575601FF6523900476502 /* XJPeopleTableViewCell.m in Sources */,
 				812222EE1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.m in Sources */,
+				817D42352004A4AA00B3A2A7 /* PlaceholderTextView.m in Sources */,
 				183A46931FC6FDB30052596F /* MainCardInfo.m in Sources */,
 				183A46901FC6FC2A0052596F /* MainViewController.m in Sources */,
 				18B2A14D1FC5907C003B97A0 /* XJ_Letter.xcdatamodeld in Sources */,
@@ -732,6 +749,7 @@
 				18A714BB1FC7FCBD00C13614 /* UIView+Sizes.m in Sources */,
 				81214AF82002121A0053FD0A /* addressModel.m in Sources */,
 				81137DA11FF5ED76000B873E /* XJguanzhufansTableViewCell.m in Sources */,
+				817D42382004AFA200B3A2A7 /* XJModifyPassWordViewController.m in Sources */,
 				183A468D1FC6DD7C0052596F /* XJBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

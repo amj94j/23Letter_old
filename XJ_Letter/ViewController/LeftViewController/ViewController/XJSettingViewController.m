@@ -9,6 +9,8 @@
 #import "XJSettingViewController.h"
 #import "XJModifyNickNameViewController.h"
 #import "XJModefyAddressViewController.h"
+#import "XJHelpFeedBackViewController.h"
+#import "XJModifyPassWordViewController.h"
 @interface XJSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tabView;
 @property (strong,nonatomic)NSMutableArray *dateSource;
@@ -146,6 +148,9 @@
 }
 -(void)changPassWord{
     //修改密码
+    XJModifyPassWordViewController  *xjpd = [[XJModifyPassWordViewController alloc]init];
+    xjpd.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:xjpd animated:YES];
 }
 -(void)messageSetting{
     //消息设置
@@ -155,6 +160,9 @@
 }
 -(void)helpAndFeedBack{
     //帮助与反馈
+    XJHelpFeedBackViewController  *xjfb = [[XJHelpFeedBackViewController alloc]init];
+    xjfb.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:xjfb animated:YES];
 }
 -(void)bussinessIn{
     //商户入驻

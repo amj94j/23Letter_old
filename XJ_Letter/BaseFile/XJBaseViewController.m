@@ -92,10 +92,10 @@
                     highlightedImage:(UIImage *)highlightedImage
                               target:(id)target
                               action:(SEL)action {
-    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, PXChange(44), PXChange(44))];
     [button setImage:image forState:UIControlStateNormal];
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0, -PXChange(20), 0, PXChange(20))];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
