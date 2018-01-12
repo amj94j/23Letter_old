@@ -8,6 +8,7 @@
 
 #import "XJMyWalletViewController.h"
 #import "XJJiaoYiJiLuViewController.h"
+#import "XJChongZhiViewController.h"
 @interface XJMyWalletViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (weak, nonatomic) IBOutlet UIButton *chongzhiBtn;
@@ -42,6 +43,12 @@
     XJJiaoYiJiLuViewController  *xjv = [[XJJiaoYiJiLuViewController alloc]init];
     [self.navigationController pushViewController:xjv animated:YES];
 }
+- (IBAction)chongzhiClick:(id)sender {
+    XJChongZhiViewController *xczvc  = [[XJChongZhiViewController alloc]init];
+    [xczvc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:xczvc animated:YES];
+}
+
 - (void)backUp{
     [self.navigationController popViewControllerAnimated:YES];
 }

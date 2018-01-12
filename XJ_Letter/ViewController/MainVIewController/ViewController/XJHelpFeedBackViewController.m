@@ -46,7 +46,7 @@
         _textView.textColor = [UIColor blackColor];
         _textView.textAlignment = NSTextAlignmentLeft;
         _textView.editable = YES;
-        _textView.layer.cornerRadius = 10.0f;
+        _textView.layer.cornerRadius = 10.0f; 
         _textView.layer.borderColor = [UIColor colorWithHexString:@"#c0c0c0"].CGColor;
         _textView.layer.borderWidth = PXChange(1);
         _textView.placeholderColor = [UIColor colorWithHexString:@"#c0c0c0"];

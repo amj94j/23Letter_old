@@ -54,6 +54,7 @@
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
 		81D1D5F31FFDD41300998BFB /* XJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D5F11FFDD41300998BFB /* XJSettingViewController.m */; };
 		81D1D5F41FFDD41300998BFB /* XJSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D1D5F21FFDD41300998BFB /* XJSettingViewController.xib */; };
+		81D3F84D20060775008F806C /* XJChongZhiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D3F84C20060775008F806C /* XJChongZhiViewController.m */; };
 		81D5755B1FF64A6800476502 /* XJPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D575591FF64A6800476502 /* XJPeopleViewController.m */; };
 		81D5755C1FF64A6800476502 /* XJPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D5755A1FF64A6800476502 /* XJPeopleViewController.xib */; };
 		81D575601FF6523900476502 /* XJPeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D5755E1FF6523900476502 /* XJPeopleTableViewCell.m */; };
@@ -174,6 +175,8 @@
 		81D1D5F01FFDD41300998BFB /* XJSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSettingViewController.h; sourceTree = "<group>"; };
 		81D1D5F11FFDD41300998BFB /* XJSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJSettingViewController.m; sourceTree = "<group>"; };
 		81D1D5F21FFDD41300998BFB /* XJSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJSettingViewController.xib; sourceTree = "<group>"; };
+		81D3F84B20060775008F806C /* XJChongZhiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChongZhiViewController.h; sourceTree = "<group>"; };
+		81D3F84C20060775008F806C /* XJChongZhiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJChongZhiViewController.m; sourceTree = "<group>"; };
 		81D575581FF64A6800476502 /* XJPeopleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJPeopleViewController.h; sourceTree = "<group>"; };
 		81D575591FF64A6800476502 /* XJPeopleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJPeopleViewController.m; sourceTree = "<group>"; };
 		81D5755A1FF64A6800476502 /* XJPeopleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJPeopleViewController.xib; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 				817D42312004A31A00B3A2A7 /* XJHelpFeedBackViewController.m */,
 				817D42362004AFA200B3A2A7 /* XJModifyPassWordViewController.h */,
 				817D42372004AFA200B3A2A7 /* XJModifyPassWordViewController.m */,
+				81D3F84B20060775008F806C /* XJChongZhiViewController.h */,
+				81D3F84C20060775008F806C /* XJChongZhiViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -725,6 +730,7 @@
 				183A46961FC6FDCB0052596F /* MainSwipeCardCell.m in Sources */,
 				183A46801FC67D600052596F /* UIImage+Addons.m in Sources */,
 				8116EE871FFB66E1003236F0 /* XJMyLetterViewController.m in Sources */,
+				81D3F84D20060775008F806C /* XJChongZhiViewController.m in Sources */,
 				183A46751FC673ED0052596F /* NSDictionary+Addons.m in Sources */,
 				8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */,
 				817D42322004A31A00B3A2A7 /* XJHelpFeedBackViewController.m in Sources */,
