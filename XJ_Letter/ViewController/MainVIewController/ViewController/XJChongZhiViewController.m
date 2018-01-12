@@ -49,6 +49,7 @@
     [aliBtn setImage:[UIImage imageNamed:@"check_sel"] forState:UIControlStateSelected];
     [aliBtn addTarget:self action:@selector(aliClick:) forControlEvents:UIControlEventTouchUpInside];
     aliBtn.centerY = aliPayIcon.centerY;
+    [aliBtn setSelected:YES];
     [backView addSubview:aliBtn];
     
     UILabel * chongzhiValue = [[UILabel alloc]initWithFrame:CGRectMake(PXChange(24), PXChange(24)+backView.bottom, PXChange(300), PXChange(88))];
@@ -85,12 +86,13 @@
     Sender.selected = !Sender.selected;
 }
 -(void)nextClick{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"“23号信”想要打开支付宝" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"“23号信”想要打开“支付宝”" message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"点击了取消");
     }];
-    
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [action setValue:[UIColor colorWithHexString:@"#a2a2a2"] forKey:@"_titleTextColor"];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"点击了打开");
     }];
     [alertController addAction:action];

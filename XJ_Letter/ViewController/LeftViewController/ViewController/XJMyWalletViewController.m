@@ -9,6 +9,7 @@
 #import "XJMyWalletViewController.h"
 #import "XJJiaoYiJiLuViewController.h"
 #import "XJChongZhiViewController.h"
+#import "XJTiXianViewController.h"
 @interface XJMyWalletViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (weak, nonatomic) IBOutlet UIButton *chongzhiBtn;
@@ -47,6 +48,11 @@
     XJChongZhiViewController *xczvc  = [[XJChongZhiViewController alloc]init];
     [xczvc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:xczvc animated:YES];
+}
+- (IBAction)tixianClick:(id)sender {
+    XJTiXianViewController *xtxvc  = [[XJTiXianViewController alloc]init];
+    [xtxvc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:xtxvc animated:YES];
 }
 
 - (void)backUp{

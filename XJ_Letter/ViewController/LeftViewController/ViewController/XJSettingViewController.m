@@ -11,6 +11,7 @@
 #import "XJModefyAddressViewController.h"
 #import "XJHelpFeedBackViewController.h"
 #import "XJModifyPassWordViewController.h"
+#import "XJAboutViewController.h"
 @interface XJSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tabView;
 @property (strong,nonatomic)NSMutableArray *dateSource;
@@ -169,5 +170,8 @@
 }
 -(void)About{
     //关于23号信
+    XJAboutViewController *abvc = [[XJAboutViewController alloc]init];
+    abvc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:abvc animated:YES];
 }
 @end

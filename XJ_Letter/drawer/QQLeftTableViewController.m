@@ -8,9 +8,9 @@
 
 #import "QQLeftTableViewController.h"
 #import "QQDrawerViewController.h"
+#import "FSMediaPicker.h"
 
-
-@interface QQLeftTableViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface QQLeftTableViewController ()<UITableViewDelegate,UITableViewDataSource,FSMediaPickerDelegate>
 @property (nonatomic, strong)UIView *headerView;
 @property (nonatomic, strong)NSMutableArray *dataArray;
 @property (nonatomic, strong)NSMutableArray *imgDataArr;
@@ -22,6 +22,7 @@
 @property (nonatomic, strong)UILabel *fansLabel;
 @property (nonatomic, strong)UIButton *guanzhuBtn;
 @property (nonatomic, strong)UIButton *fansBtn;
+@property (nonatomic, strong)UIButton *iconBtn;
 @end
 
 @implementation QQLeftTableViewController
@@ -48,7 +49,7 @@
     
 }
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; 
+    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Table view data source
@@ -150,6 +151,10 @@
         self.iconImage.center = CGPointMake(_headerView.width/2.0f,self.iconImage.height/2.0f+PXChange(100));
         [_headerView addSubview:self.iconImage];
         
+        self.iconBtn = [[UIButton alloc]initWithFrame:self.iconImage.frame];
+        [self.iconBtn addTarget:self action:@selector(iconClick) forControlEvents:UIControlEventTouchUpInside];
+        [_headerView addSubview:self.iconBtn];
+        
         self.nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, leftDrawerWidth, PXChange(33))];
         self.nameLabel.text = @"会飞的企鹅";
         self.nameLabel.textColor = [UIColor colorWithHexString:@"#333333"];
@@ -218,6 +223,13 @@
     }
     return _headerView;
 }
+- (void)iconClick{
+    FSMediaPicker *mediaPicker = [[FSMediaPicker alloc] init];
+    mediaPicker.mediaType = FSMediaTypePhoto;
+    mediaPicker.editMode = FSEditModeCircular;
+    mediaPicker.delegate = self;
+    [mediaPicker showFromView:self.view];
+}
 //关注
 -(void)guanzhuClick{
     [[QQDrawerViewController shareDrawerViewController] closeDrawerWithOpenDuration:0.0];
@@ -270,41 +282,17 @@
     }
     return _imgDataArr;
 }
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+#pragma mark - FSMediaPicker delegate
+- (void)mediaPicker:(FSMediaPicker *)mediaPicker didFinishWithMediaInfo:(NSDictionary *)mediaInfo
+{
+    if(mediaInfo.mediaType == FSMediaTypePhoto)
+    {
+        self.iconImage.image = mediaInfo.editedImage;
+//        self.localImage = mediaPicker.editMode == FSEditModeCircular? mediaInfo.circularEditedImage:mediaInfo.editedImage;
+//        [self reloadTableData];
+//        [self savePressed:nil];
+    }
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
 
 // Override to support conditional rearranging of the table view.

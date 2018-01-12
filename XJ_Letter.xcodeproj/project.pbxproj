@@ -52,6 +52,10 @@
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
+		81A3E9AC200897020014C071 /* XJTiXianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A3E9AB200897020014C071 /* XJTiXianViewController.m */; };
+		81A3E9B02008B06E0014C071 /* XJAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A3E9AE2008B06E0014C071 /* XJAboutViewController.m */; };
+		81A3E9B12008B06E0014C071 /* XJAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A3E9AF2008B06E0014C071 /* XJAboutViewController.xib */; };
+		81A3E9B42008BB240014C071 /* FSMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A3E9B22008BB240014C071 /* FSMediaPicker.m */; };
 		81D1D5F31FFDD41300998BFB /* XJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D1D5F11FFDD41300998BFB /* XJSettingViewController.m */; };
 		81D1D5F41FFDD41300998BFB /* XJSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D1D5F21FFDD41300998BFB /* XJSettingViewController.xib */; };
 		81D3F84D20060775008F806C /* XJChongZhiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D3F84C20060775008F806C /* XJChongZhiViewController.m */; };
@@ -172,6 +176,13 @@
 		818663781FF1357400EEF540 /* QQMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQMainTabBarController.h; sourceTree = "<group>"; };
 		818663791FF1357400EEF540 /* QQDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQDrawerViewController.m; sourceTree = "<group>"; };
 		8186637A1FF1357400EEF540 /* QQMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQMainTabBarController.m; sourceTree = "<group>"; };
+		81A3E9AA200897020014C071 /* XJTiXianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJTiXianViewController.h; sourceTree = "<group>"; };
+		81A3E9AB200897020014C071 /* XJTiXianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJTiXianViewController.m; sourceTree = "<group>"; };
+		81A3E9AD2008B06E0014C071 /* XJAboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJAboutViewController.h; sourceTree = "<group>"; };
+		81A3E9AE2008B06E0014C071 /* XJAboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJAboutViewController.m; sourceTree = "<group>"; };
+		81A3E9AF2008B06E0014C071 /* XJAboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJAboutViewController.xib; sourceTree = "<group>"; };
+		81A3E9B22008BB240014C071 /* FSMediaPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMediaPicker.m; sourceTree = "<group>"; };
+		81A3E9B32008BB240014C071 /* FSMediaPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMediaPicker.h; sourceTree = "<group>"; };
 		81D1D5F01FFDD41300998BFB /* XJSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJSettingViewController.h; sourceTree = "<group>"; };
 		81D1D5F11FFDD41300998BFB /* XJSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJSettingViewController.m; sourceTree = "<group>"; };
 		81D1D5F21FFDD41300998BFB /* XJSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XJSettingViewController.xib; sourceTree = "<group>"; };
@@ -292,6 +303,8 @@
 				817D42372004AFA200B3A2A7 /* XJModifyPassWordViewController.m */,
 				81D3F84B20060775008F806C /* XJChongZhiViewController.h */,
 				81D3F84C20060775008F806C /* XJChongZhiViewController.m */,
+				81A3E9AA200897020014C071 /* XJTiXianViewController.h */,
+				81A3E9AB200897020014C071 /* XJTiXianViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -383,6 +396,8 @@
 		18B2A17B1FC592AF003B97A0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				81A3E9B32008BB240014C071 /* FSMediaPicker.h */,
+				81A3E9B22008BB240014C071 /* FSMediaPicker.m */,
 				817D42332004A4AA00B3A2A7 /* PlaceholderTextView.h */,
 				817D42342004A4AA00B3A2A7 /* PlaceholderTextView.m */,
 				183A46811FC6CCBF0052596F /* LZSwipeableView */,
@@ -496,6 +511,9 @@
 				81D1D5F01FFDD41300998BFB /* XJSettingViewController.h */,
 				81D1D5F11FFDD41300998BFB /* XJSettingViewController.m */,
 				81D1D5F21FFDD41300998BFB /* XJSettingViewController.xib */,
+				81A3E9AD2008B06E0014C071 /* XJAboutViewController.h */,
+				81A3E9AE2008B06E0014C071 /* XJAboutViewController.m */,
+				81A3E9AF2008B06E0014C071 /* XJAboutViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -644,6 +662,7 @@
 				812222EF1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.xib in Resources */,
 				18B2A14A1FC5907C003B97A0 /* Main.storyboard in Resources */,
 				812222F41FFCBF9700C184C2 /* XJJYJLTableViewCell.xib in Resources */,
+				81A3E9B12008B06E0014C071 /* XJAboutViewController.xib in Resources */,
 				81D5755C1FF64A6800476502 /* XJPeopleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +741,7 @@
 			files = (
 				810BB2D51FFBC1B4000F91F4 /* XJMyWalletViewController.m in Sources */,
 				18E93AC71FC7AFD700832889 /* NSObject+LZSwipeCategory.m in Sources */,
+				81A3E9B02008B06E0014C071 /* XJAboutViewController.m in Sources */,
 				81137D9A1FF5E5D5000B873E /* XJGuanZhuViewController.m in Sources */,
 				18E93AC61FC7AFCD00832889 /* LZSwipeableView.m in Sources */,
 				1876F4E41FCE8972004F8E18 /* MainBottomToolView.m in Sources */,
@@ -743,6 +763,7 @@
 				81214AF22001EC8A0053FD0A /* XJModifyNickNameViewController.m in Sources */,
 				81D575601FF6523900476502 /* XJPeopleTableViewCell.m in Sources */,
 				812222EE1FFCBA1400C184C2 /* XJJiaoYiJiLuViewController.m in Sources */,
+				81A3E9AC200897020014C071 /* XJTiXianViewController.m in Sources */,
 				817D42352004A4AA00B3A2A7 /* PlaceholderTextView.m in Sources */,
 				183A46931FC6FDB30052596F /* MainCardInfo.m in Sources */,
 				183A46901FC6FC2A0052596F /* MainViewController.m in Sources */,
@@ -751,6 +772,7 @@
 				81D1D5F31FFDD41300998BFB /* XJSettingViewController.m in Sources */,
 				18E93ACA1FC7BA7C00832889 /* XJBaseNavigationController.m in Sources */,
 				18B2A1551FC5907C003B97A0 /* main.m in Sources */,
+				81A3E9B42008BB240014C071 /* FSMediaPicker.m in Sources */,
 				18B2A1441FC5907C003B97A0 /* AppDelegate.m in Sources */,
 				18A714BB1FC7FCBD00C13614 /* UIView+Sizes.m in Sources */,
 				81214AF82002121A0053FD0A /* addressModel.m in Sources */,
