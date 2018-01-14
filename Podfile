@@ -8,4 +8,5 @@ target ‘XJ_Letter’ do
     pod 'HYBNetworking', '~> 3.3.1'
     pod 'SDAutoLayout'
     pod 'MJExtension', '~> 3.0.13'
+    pod 'MJRefresh'
 end

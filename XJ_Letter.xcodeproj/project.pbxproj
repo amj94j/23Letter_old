@@ -49,6 +49,8 @@
 		817D42322004A31A00B3A2A7 /* XJHelpFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817D42312004A31A00B3A2A7 /* XJHelpFeedBackViewController.m */; };
 		817D42352004A4AA00B3A2A7 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817D42342004A4AA00B3A2A7 /* PlaceholderTextView.m */; };
 		817D42382004AFA200B3A2A7 /* XJModifyPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817D42372004AFA200B3A2A7 /* XJModifyPassWordViewController.m */; };
+		817F8E0C200AFE05003B8944 /* MLSearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817F8E0A200AFE05003B8944 /* MLSearchResultsTableViewController.m */; };
+		817F8E0D200AFE05003B8944 /* MLSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817F8E0B200AFE05003B8944 /* MLSearchViewController.m */; };
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
@@ -170,6 +172,10 @@
 		817D42342004A4AA00B3A2A7 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 		817D42362004AFA200B3A2A7 /* XJModifyPassWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJModifyPassWordViewController.h; sourceTree = "<group>"; };
 		817D42372004AFA200B3A2A7 /* XJModifyPassWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJModifyPassWordViewController.m; sourceTree = "<group>"; };
+		817F8E08200AFE05003B8944 /* MLSearchResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchResultsTableViewController.h; sourceTree = "<group>"; };
+		817F8E09200AFE05003B8944 /* MLSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchViewController.h; sourceTree = "<group>"; };
+		817F8E0A200AFE05003B8944 /* MLSearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchResultsTableViewController.m; sourceTree = "<group>"; };
+		817F8E0B200AFE05003B8944 /* MLSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchViewController.m; sourceTree = "<group>"; };
 		818663751FF1357300EEF540 /* QQLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLeftTableViewController.h; sourceTree = "<group>"; };
 		818663761FF1357300EEF540 /* QQLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLeftTableViewController.m; sourceTree = "<group>"; };
 		818663771FF1357300EEF540 /* QQDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDrawerViewController.h; sourceTree = "<group>"; };
@@ -387,6 +393,7 @@
 		18B2A17A1FC59291003B97A0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				817F8E07200AFE05003B8944 /* SearchController */,
 				81137D941FF5E594000B873E /* LeftViewController */,
 				183A46871FC6CCFE0052596F /* MainVIewController */,
 			);
@@ -516,6 +523,17 @@
 				81A3E9AF2008B06E0014C071 /* XJAboutViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		817F8E07200AFE05003B8944 /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				817F8E08200AFE05003B8944 /* MLSearchResultsTableViewController.h */,
+				817F8E09200AFE05003B8944 /* MLSearchViewController.h */,
+				817F8E0A200AFE05003B8944 /* MLSearchResultsTableViewController.m */,
+				817F8E0B200AFE05003B8944 /* MLSearchViewController.m */,
+			);
+			path = SearchController;
 			sourceTree = "<group>";
 		};
 		818663741FF1352300EEF540 /* drawer */ = {
@@ -723,9 +741,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XJ_Letter/Pods-XJ_Letter-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -772,9 +793,11 @@
 				81D1D5F31FFDD41300998BFB /* XJSettingViewController.m in Sources */,
 				18E93ACA1FC7BA7C00832889 /* XJBaseNavigationController.m in Sources */,
 				18B2A1551FC5907C003B97A0 /* main.m in Sources */,
+				817F8E0D200AFE05003B8944 /* MLSearchViewController.m in Sources */,
 				81A3E9B42008BB240014C071 /* FSMediaPicker.m in Sources */,
 				18B2A1441FC5907C003B97A0 /* AppDelegate.m in Sources */,
 				18A714BB1FC7FCBD00C13614 /* UIView+Sizes.m in Sources */,
+				817F8E0C200AFE05003B8944 /* MLSearchResultsTableViewController.m in Sources */,
 				81214AF82002121A0053FD0A /* addressModel.m in Sources */,
 				81137DA11FF5ED76000B873E /* XJguanzhufansTableViewCell.m in Sources */,
 				817D42382004AFA200B3A2A7 /* XJModifyPassWordViewController.m in Sources */,

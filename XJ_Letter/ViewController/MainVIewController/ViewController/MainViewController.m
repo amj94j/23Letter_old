@@ -17,6 +17,7 @@
 #import "XJMyLetterViewController.h"
 #import "XJMyWalletViewController.h"
 #import "XJSettingViewController.h"
+#import "MLSearchViewController.h"
 #define kColorBackground_Main  [UIColor colorWithHexString:@"#f7f7f7"]
 
 @interface MainViewController () <LZSwipeableViewDataSource,
@@ -138,7 +139,11 @@ LZSwipeableViewDelegate>
 }
 //搜索
 -(void)searchClick{
-  
+    MLSearchViewController *vc = [[MLSearchViewController alloc] init];
+    vc.tagsArray = @[@"卜卜芥", @"卜人参", @"卜卜人发", @"儿茶", @"八角", @"三卜七", @"广白", @"大黄", @"大黄", @"广卜卜卜丹"];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [self presentViewController:nav  animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:NO];
 }
 //消息
 -(void)messageClick{
