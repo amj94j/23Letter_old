@@ -14,16 +14,25 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HexColors (2.2.1)
   - HYBNetworking (3.3.1):
     - AFNetworking (~> 3.1.0)
   - JSONModel (1.7.0)
   - Masonry (1.1.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15.1)
+  - ReactiveCocoa (2.1.8):
+    - ReactiveCocoa/Core (= 2.1.8)
+    - ReactiveCocoa/no-arc (= 2.1.8)
+  - ReactiveCocoa/Core (2.1.8):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.1.8)
   - SDAutoLayout (2.2.0)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
+  - TSMessages (0.9.12):
+    - HexColors (~> 2.2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -32,19 +41,24 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MJExtension (~> 3.0.13)
   - MJRefresh
+  - ReactiveCocoa (~> 2.1.8)
   - SDAutoLayout
   - SDWebImage (~> 4.2.2)
+  - TSMessages
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HYBNetworking: 5b350e2eacfbf6db7d3f4253274b2f2bb68e881c
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: 8b6e25bd3039245a50593e7e25fc1b99a50b6778
+PODFILE CHECKSUM: 244a9e6337841012528808ebd19df161c84cb983
 
 COCOAPODS: 1.3.1

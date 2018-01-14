@@ -12,6 +12,7 @@
 #import "XJHelpFeedBackViewController.h"
 #import "XJModifyPassWordViewController.h"
 #import "XJAboutViewController.h"
+#import "XJJiaMengViewController.h"
 @interface XJSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tabView;
 @property (strong,nonatomic)NSMutableArray *dateSource;
@@ -167,6 +168,9 @@
 }
 -(void)bussinessIn{
     //商户入驻
+    XJJiaMengViewController *xjjm = [[XJJiaMengViewController alloc]init];
+    xjjm.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:xjjm animated:YES];
 }
 -(void)About{
     //关于23号信

@@ -140,7 +140,7 @@ LZSwipeableViewDelegate>
 //搜索
 -(void)searchClick{
     MLSearchViewController *vc = [[MLSearchViewController alloc] init];
-    vc.tagsArray = @[@"卜卜芥", @"卜人参", @"卜卜人发", @"儿茶", @"八角", @"三卜七", @"广白", @"大黄", @"大黄", @"广卜卜卜丹"];
+    vc.tagsArray = @[@"青春故事", @"回忆杀", @"风停雨万霖天下", @"郭敬明", @"值得买", @"周杰伦", @"林俊杰"];
 //    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
 //    [self presentViewController:nav  animated:YES completion:nil];
     [self.navigationController pushViewController:vc animated:NO];

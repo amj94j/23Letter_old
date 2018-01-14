@@ -9,7 +9,9 @@
 #import "MLSearchViewController.h"
 #import "MLSearchResultsTableViewController.h"
 #import <MJRefresh/MJRefresh.h>
-
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "JZZManager.h"
+#import "XJLocationViewController.h"
 #define PYSEARCH_SEARCH_HISTORY_CACHE_PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"MLSearchhistories.plist"] // 搜索历史存储路径
 #define kScreenWidth             ([[UIScreen mainScreen] bounds].size.width)
 #define kScreenHeight            ([[UIScreen mainScreen] bounds].size.height)
@@ -31,6 +33,7 @@
 /** 搜索建议（推荐）控制器 */
 @property (nonatomic, weak) MLSearchResultsTableViewController *searchSuggestionVC;
 
+@property (nonatomic, strong) UIButton *locationBtn;
 
 @end
 
@@ -47,43 +50,44 @@
                 [self.searchBar resignFirstResponder];
             }
             else
-            {
-                // 设置搜索信息
+            {  // 设置搜索信息
                 _weakSelf.searchBar.text = didSelectText;
-                
                 // 缓存数据并且刷新界面
                 [_weakSelf saveSearchCacheAndRefreshView];
             }
-            
-            
         };
         searchSuggestionVC.view.frame = CGRectMake(0, 64, self.view.mj_w, self.view.mj_h);
         searchSuggestionVC.view.backgroundColor = [UIColor whiteColor];
-
         [self.view addSubview:searchSuggestionVC.view];
         [self addChildViewController:searchSuggestionVC];
         _searchSuggestionVC = searchSuggestionVC;
     }
     return _searchSuggestionVC;
 }
-
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
+-(void)setlocation{
+    [[RACObserve([JZZManager sharedManager], currentCity)
+      deliverOn:[RACScheduler mainThreadScheduler]]
+     subscribeNext:^(NSString *newCity) {
+         [self.locationBtn setTitle:newCity forState:UIControlStateNormal];
+         [self.locationBtn.titleLabel sizeToFit];
+     }];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     self.searchHistoriesCount = 20;
-    [self addCustomBackBarButtonItemWithTarget:self action:@selector(backUp)];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-    
-    
     // 创建搜索框
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(PXChange(40), 5, kScreenWidth-64-PXChange(80), 34)];
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 0, titleView.frame.size.width-20, 34)];
-    searchBar.placeholder = @"搜索内容";
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(PXChange(40), 7, kScreenWidth-64-PXChange(80), 30)];
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, titleView.frame.size.width-40-PXChange(24), 30)];
+    searchBar.placeholder = @"输入您喜欢的商品";
     searchBar.delegate = self;
     searchBar.backgroundColor = [UIColor colorWithHexString:@"#f7f7f7"];
     searchBar.layer.cornerRadius = 12;
@@ -95,18 +99,28 @@
     searchField.backgroundColor = [UIColor colorWithHexString:@"#f7f7f7"];
     self.searchBar = searchBar;
     self.navigationItem.titleView = titleView;
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(backUp)];
+    UIButton *rBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [rBtn setTitle:@"取消" forState:UIControlStateNormal];
+    [rBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [rBtn addTarget:self action:@selector(backUp) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc]initWithCustomView:rBtn];
     self.headerView = [[UIView alloc] init];
     self.headerView.mj_x = 0;
     self.headerView.mj_y = 0;
     self.headerView.mj_w = kScreenWidth;
-    
-    
+    self.locationBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [self.locationBtn setTitle:@"北京市" forState:UIControlStateNormal];
+    [self.locationBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.locationBtn setImage:[UIImage imageNamed:@"address_no"] forState:UIControlStateNormal];
+    [self.locationBtn addTarget:self action:@selector(dingweiCity) forControlEvents:UIControlEventTouchUpInside];
+    [self.locationBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -PXChange(50), 0, PXChange(50))];
+    [self.locationBtn setImageEdgeInsets:UIEdgeInsetsMake(0, PXChange(100)+self.locationBtn.titleLabel.width, 0, -PXChange(100)-self.locationBtn.titleLabel.width)];
+    self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc]initWithCustomView:self.locationBtn];
+    [self setlocation];
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 20, kScreenWidth-20, 44)];
-    titleLabel.text = @"热门搜索";
-    titleLabel.font = [UIFont systemFontOfSize:13];
-    titleLabel.textColor = [UIColor grayColor];
+    titleLabel.text = @"热门推荐";
+    titleLabel.font = [UIFont systemFontOfSize:17];
+    titleLabel.textColor = [UIColor blackColor];
     [titleLabel sizeToFit];
     [self.headerView addSubview:titleLabel];
     
@@ -114,17 +128,9 @@
     self.tagsView.mj_x = 10;
     self.tagsView.mj_y = titleLabel.mj_y+30;
     self.tagsView.mj_w = kScreenWidth-20;
-    
     [self.headerView addSubview:self.tagsView];
-    
-    
-//    self.tagsView.backgroundColor = [UIColor redColor];
-//    self.headerView.backgroundColor = [UIColor orangeColor];
-//    titleLabel.backgroundColor = [UIColor blueColor];
-    
-    
+//    self.tagsView.backgroundColor = [UIColor colorWithHexString:@"#f7f7f7"];
     self.tableView.tableHeaderView = self.headerView;
-    
     UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 30)];
     UILabel *footLabel = [[UILabel alloc] initWithFrame:footView.frame];
     footLabel.textColor = [UIColor grayColor];
@@ -132,22 +138,18 @@
     footLabel.userInteractionEnabled = YES;
     footLabel.text = @"清空搜索记录";
     footLabel.textAlignment = NSTextAlignmentCenter;
-    
     [footLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(emptySearchHistoryDidClick)]];
     [footView addSubview:footLabel];
-    
-    
     self.tableView.tableFooterView = footView;
-    
-    
     [self tagsViewWithTag];
-    
-    
-    
-    
 }
 -(void)backUp{
     [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)dingweiCity{
+    XJLocationViewController  *xjvc =[[XJLocationViewController alloc]init];
+    xjvc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:xjvc animated:YES];
 }
 - (void)tagsViewWithTag
 {
@@ -160,21 +162,21 @@
         
         if (i != self.tagsArray.count-1) {
             
-            CGFloat width = [self getWidthWithTitle:self.tagsArray[i+1] font:[UIFont systemFontOfSize:14]];
-            if (allLabelWidth + width+10 > self.tagsView.frame.size.width) {
+            CGFloat width = [self getWidthWithTitle:self.tagsArray[i+1] font:[UIFont systemFontOfSize:PXChange(28)]];
+            if (allLabelWidth + width+PXChange(20) > self.tagsView.frame.size.width) {
                 rowHeight++;
                 allLabelWidth = 0;
-                allLabelHeight = rowHeight*40;
+                allLabelHeight = rowHeight*PXChange(80);
             }
         }
         else
         {
             
-            CGFloat width = [self getWidthWithTitle:self.tagsArray[self.tagsArray.count-1] font:[UIFont systemFontOfSize:14]];
-            if (allLabelWidth + width+10 > self.tagsView.frame.size.width) {
+            CGFloat width = [self getWidthWithTitle:self.tagsArray[self.tagsArray.count-1] font:[UIFont systemFontOfSize:PXChange(28)]];
+            if (allLabelWidth + width+PXChange(20) > self.tagsView.frame.size.width) {
                 rowHeight++;
                 allLabelWidth = 0;
-                allLabelHeight = rowHeight*40;
+                allLabelHeight = rowHeight*PXChange(80);
             }
         }
         
@@ -183,26 +185,26 @@
         UILabel *rectangleTagLabel = [[UILabel alloc] init];
         // 设置属性
         rectangleTagLabel.userInteractionEnabled = YES;
-        rectangleTagLabel.font = [UIFont systemFontOfSize:14];
-        rectangleTagLabel.textColor = [UIColor whiteColor];
-        rectangleTagLabel.backgroundColor = [UIColor lightGrayColor];
+        rectangleTagLabel.font = [UIFont systemFontOfSize:PXChange(28)];
+        rectangleTagLabel.textColor = [UIColor colorWithHexString:@"#848484"];
+        rectangleTagLabel.backgroundColor = [UIColor colorWithHexString:@"#efefef"];
         rectangleTagLabel.text = self.tagsArray[i];
         rectangleTagLabel.textAlignment = NSTextAlignmentCenter;
         [rectangleTagLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tagDidCLick:)]];
         
-        CGFloat labelWidth = [self getWidthWithTitle:self.tagsArray[i] font:[UIFont systemFontOfSize:14]];
+        CGFloat labelWidth = [self getWidthWithTitle:self.tagsArray[i] font:[UIFont systemFontOfSize:PXChange(28)]]+PXChange(40);
         
-        rectangleTagLabel.layer.cornerRadius = 5;
+        rectangleTagLabel.layer.cornerRadius = PXChange(30);
         [rectangleTagLabel.layer setMasksToBounds:YES];
         
-        rectangleTagLabel.frame = CGRectMake(allLabelWidth, allLabelHeight, labelWidth, 25);
+        rectangleTagLabel.frame = CGRectMake(allLabelWidth, allLabelHeight, labelWidth, PXChange(60));
         [self.tagsView addSubview:rectangleTagLabel];
         
         allLabelWidth = allLabelWidth+10+labelWidth;
     }
     
-    self.tagsView.mj_h = rowHeight*40+40;
-    self.headerView.mj_h = self.tagsView.mj_y+self.tagsView.mj_h+10;
+    self.tagsView.mj_h = rowHeight*PXChange(80)+PXChange(80);
+    self.headerView.mj_h = self.tagsView.mj_y+self.tagsView.mj_h+PXChange(20);
 }
 
 /** 选中标签 */
@@ -269,29 +271,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    
-    
     // 添加关闭按钮
-    UIButton *closetButton = [[UIButton alloc] init];
-    // 设置图片容器大小、图片原图居中
-    closetButton.mj_size = CGSizeMake(cell.mj_h, cell.mj_h);
-    [closetButton setTitle:@"x" forState:UIControlStateNormal];
-    [closetButton addTarget:self action:@selector(closeDidClick:) forControlEvents:UIControlEventTouchUpInside];
-    cell.accessoryView = closetButton;
-    [closetButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    
+    cell.imageView.image = [UIImage imageNamed:@"search_icon"];
     cell.textLabel.textColor = [UIColor grayColor];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.text = self.searchHistories[indexPath.row];
-    
+    cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"search_more"]];
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (self.searchHistories.count != 0) {
-        
+
         return @"搜索历史";
     }
     return nil;
@@ -299,33 +291,30 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth-10, 60)];
-    view.backgroundColor = [UIColor whiteColor];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth-10, PXChange(94))];
+    view.backgroundColor = [UIColor colorWithHexString:@"#f7f7f7"];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:view.frame];
     titleLabel.text = @"搜索历史";
-    titleLabel.font = [UIFont systemFontOfSize:14];
+    titleLabel.font = [UIFont systemFontOfSize:17];
     [titleLabel sizeToFit];
+    titleLabel.center = CGPointMake(titleLabel.width/2.0f+PXChange(24), view.height/2.0f);
     [view addSubview:titleLabel];
     
     return view;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return PXChange(94);
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 取出选中的cell
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.searchBar.text = cell.textLabel.text;
-    
     // 缓存数据并且刷新界面
     [self saveSearchCacheAndRefreshView];
-    
     [self searchBarSearchButtonClicked:self.searchBar];
-    
-    
-    
-    
     self.searchSuggestionVC.view.hidden = NO;
     self.tableView.hidden = YES;
     [self.view bringSubviewToFront:self.searchSuggestionVC.view];

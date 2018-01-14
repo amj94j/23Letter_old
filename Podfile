@@ -9,4 +9,6 @@ target ‘XJ_Letter’ do
     pod 'SDAutoLayout'
     pod 'MJExtension', '~> 3.0.13'
     pod 'MJRefresh'
+    pod 'ReactiveCocoa', '~> 2.1.8'
+    pod 'TSMessages'
 end

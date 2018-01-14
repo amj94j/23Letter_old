@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4ED9C4E070D6EB5B1F4D9283DC9CC6FD'
+               BlueprintIdentifier = 'C99B58A56FCEF89B6E7DAA3220CC0D40'
                BlueprintName = 'SDAutoLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libSDAutoLayout.a'>

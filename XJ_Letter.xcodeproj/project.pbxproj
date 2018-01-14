@@ -51,6 +51,9 @@
 		817D42382004AFA200B3A2A7 /* XJModifyPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817D42372004AFA200B3A2A7 /* XJModifyPassWordViewController.m */; };
 		817F8E0C200AFE05003B8944 /* MLSearchResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817F8E0A200AFE05003B8944 /* MLSearchResultsTableViewController.m */; };
 		817F8E0D200AFE05003B8944 /* MLSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817F8E0B200AFE05003B8944 /* MLSearchViewController.m */; };
+		817F8E10200B3A1D003B8944 /* JZZManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 817F8E0F200B3A1D003B8944 /* JZZManager.m */; };
+		817F8E13200B3F96003B8944 /* XJLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817F8E12200B3F96003B8944 /* XJLocationViewController.m */; };
+		817F8E16200B43BC003B8944 /* XJJiaMengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817F8E15200B43BC003B8944 /* XJJiaMengViewController.m */; };
 		8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663761FF1357300EEF540 /* QQLeftTableViewController.m */; };
 		8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818663791FF1357400EEF540 /* QQDrawerViewController.m */; };
 		8186637D1FF1357400EEF540 /* QQMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186637A1FF1357400EEF540 /* QQMainTabBarController.m */; };
@@ -176,6 +179,12 @@
 		817F8E09200AFE05003B8944 /* MLSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchViewController.h; sourceTree = "<group>"; };
 		817F8E0A200AFE05003B8944 /* MLSearchResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchResultsTableViewController.m; sourceTree = "<group>"; };
 		817F8E0B200AFE05003B8944 /* MLSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchViewController.m; sourceTree = "<group>"; };
+		817F8E0E200B3A1C003B8944 /* JZZManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZZManager.h; sourceTree = "<group>"; };
+		817F8E0F200B3A1D003B8944 /* JZZManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZZManager.m; sourceTree = "<group>"; };
+		817F8E11200B3F96003B8944 /* XJLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJLocationViewController.h; sourceTree = "<group>"; };
+		817F8E12200B3F96003B8944 /* XJLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJLocationViewController.m; sourceTree = "<group>"; };
+		817F8E14200B43BC003B8944 /* XJJiaMengViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJJiaMengViewController.h; sourceTree = "<group>"; };
+		817F8E15200B43BC003B8944 /* XJJiaMengViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJJiaMengViewController.m; sourceTree = "<group>"; };
 		818663751FF1357300EEF540 /* QQLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLeftTableViewController.h; sourceTree = "<group>"; };
 		818663761FF1357300EEF540 /* QQLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLeftTableViewController.m; sourceTree = "<group>"; };
 		818663771FF1357300EEF540 /* QQDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDrawerViewController.h; sourceTree = "<group>"; };
@@ -311,6 +320,10 @@
 				81D3F84C20060775008F806C /* XJChongZhiViewController.m */,
 				81A3E9AA200897020014C071 /* XJTiXianViewController.h */,
 				81A3E9AB200897020014C071 /* XJTiXianViewController.m */,
+				817F8E11200B3F96003B8944 /* XJLocationViewController.h */,
+				817F8E12200B3F96003B8944 /* XJLocationViewController.m */,
+				817F8E14200B43BC003B8944 /* XJJiaMengViewController.h */,
+				817F8E15200B43BC003B8944 /* XJJiaMengViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -403,6 +416,8 @@
 		18B2A17B1FC592AF003B97A0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				817F8E0E200B3A1C003B8944 /* JZZManager.h */,
+				817F8E0F200B3A1D003B8944 /* JZZManager.m */,
 				81A3E9B32008BB240014C071 /* FSMediaPicker.h */,
 				81A3E9B22008BB240014C071 /* FSMediaPicker.m */,
 				817D42332004A4AA00B3A2A7 /* PlaceholderTextView.h */,
@@ -743,6 +758,23 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XJ_Letter/Pods-XJ_Letter-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/TSMessagesDefaultDesign.json",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -762,6 +794,7 @@
 			files = (
 				810BB2D51FFBC1B4000F91F4 /* XJMyWalletViewController.m in Sources */,
 				18E93AC71FC7AFD700832889 /* NSObject+LZSwipeCategory.m in Sources */,
+				817F8E16200B43BC003B8944 /* XJJiaMengViewController.m in Sources */,
 				81A3E9B02008B06E0014C071 /* XJAboutViewController.m in Sources */,
 				81137D9A1FF5E5D5000B873E /* XJGuanZhuViewController.m in Sources */,
 				18E93AC61FC7AFCD00832889 /* LZSwipeableView.m in Sources */,
@@ -776,8 +809,10 @@
 				8186637C1FF1357400EEF540 /* QQDrawerViewController.m in Sources */,
 				817D42322004A31A00B3A2A7 /* XJHelpFeedBackViewController.m in Sources */,
 				18B2A1471FC5907C003B97A0 /* ViewController.m in Sources */,
+				817F8E10200B3A1D003B8944 /* JZZManager.m in Sources */,
 				81D5755B1FF64A6800476502 /* XJPeopleViewController.m in Sources */,
 				185937931FD3D717009EA7FA /* XJLauchMovieViewController.m in Sources */,
+				817F8E13200B3F96003B8944 /* XJLocationViewController.m in Sources */,
 				81137D9D1FF5E5E2000B873E /* XJFansViewController.m in Sources */,
 				8186637B1FF1357400EEF540 /* QQLeftTableViewController.m in Sources */,
 				183A467A1FC678D40052596F /* UIColor+Addons.m in Sources */,
