@@ -51,7 +51,7 @@
     //    [self.window makeKeyAndVisible];
     
     
-    NSLog(@"---白白白白白----");
+    NSLog(@"---白白白白白--0000000--");
     return YES;
 }
 
