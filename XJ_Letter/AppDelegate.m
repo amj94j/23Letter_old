@@ -50,6 +50,8 @@
     self.window.rootViewController = rootViewController;
     //    [self.window makeKeyAndVisible];
     
+    
+    NSLog(@"-------");
     return YES;
 }
 
